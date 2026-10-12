@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Jardiva · Césped artificial y jardines en España</title>
+<meta name="description" content="Jardiva, estudio de exteriores: césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Presupuesto por WhatsApp.">
+<meta name="theme-color" content="#2F633F">
+<meta property="og:title" content="Jardiva · Espacios exteriores para vivir">
+<meta property="og:description" content="Césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%232F633F'/%3E%3Cpath d='M22 24c0-8 5-12.5 13-13.5-.6 8-5.5 12.6-13 13.5z' fill='%2368B04D'/%3E%3Ctext x='32' y='50' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='27' fill='white'%3EJR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Montserrat:wght@500;600;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Jardiva",
+  "slogan": "Espacios exteriores para vivir",
+  "telephone": "+34631991523",
+  "areaServed": "ES",
+  "knowsLanguage": ["es", "en", "fr", "de"],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Césped artificial"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mantenimiento de jardines"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tarimas composite"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Decoración de exteriores"}}
+  ]
+}
+</script>
+<style>
+/* Jardiva — paleta y tipografía del manual de marca */
+:root {
+  --bosque: #2F633F;      /* Verde Bosque, principal */
+  --natural: #68B04D;     /* Verde Natural, secundario */
+  --natural-ink: #3F7F2E; /* verde natural oscurecido para texto sobre claro */
+  --arena: #D8C8AD;
+  --piedra: #E8E4DC;
+  --carbon: #2B2B2B;
+  --blanco: #F8F7F3;
+  --card: #FFFFFF;
+  --muted: #5E625D;
+  --line: #DDD8CE;
+  --deep: #183A24;        /* fondo de la banda de contacto */
+  --wa: #25D366;
+  --head: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --r: 20px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--blanco); color: var(--carbon); font: 400 16px/1.65 var(--body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--natural); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1200px; margin-inline: auto; padding-inline: 24px; }
+h1, h2, h3 { font-family: var(--head); font-weight: 700; letter-spacing: -.025em; line-height: 1.08; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(32px, 4.4vw, 50px); color: var(--bosque); }
+h2 em, h1 em { font-style: normal; color: var(--natural-ink); }
+.eyebrow { font: 600 12px/1.3 var(--head); letter-spacing: .24em; text-transform: uppercase; color: var(--natural-ink); margin: 0 0 16px; display: flex; align-items: center; gap: 12px; }
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--natural); flex: none; }
+.lead { font-size: 18px; color: var(--muted); max-width: 34em; margin: 18px 0 0; }
+section { padding-block: 104px; }
+.sec-head { max-width: 680px; margin-bottom: 48px; }
+
+/* botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font: 600 15px/1 var(--body); padding: 16px 24px; border-radius: 999px; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn svg { width: 19px; height: 19px; flex: none; }
+.btn-primary { background: var(--natural); color: #0F2A17; box-shadow: 0 10px 24px -12px rgba(104,176,77,.9); }
+.btn-primary:hover { background: #75BD59; }
+.btn-dark { background: var(--bosque); color: #fff; }
+.btn-dark:hover { background: #26553A; }
+.btn-ghost { border-color: rgba(255,255,255,.55); color: #fff; background: rgba(255,255,255,.06); backdrop-filter: blur(6px); }
+.btn-ghost:hover { background: rgba(255,255,255,.16); }
+
+/* cabecera */
+header { position: sticky; top: 0; z-index: 40; transition: background .3s ease, box-shadow .3s ease; background: rgba(248,247,243,.86); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); }
+header.scrolled { box-shadow: 0 1px 0 var(--line); }
+.bar { display: flex; align-items: center; gap: 28px; height: 76px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex: none; }
+.brand .mark { width: 42px; height: 42px; }
+.brand .word { display: grid; line-height: 1; }
+.brand .word b { font: 800 23px/1 var(--head); color: var(--bosque); letter-spacing: -.035em; }
+.brand .word small { font: 600 7.5px/1 var(--head); letter-spacing: .34em; color: var(--muted); margin-top: 5px; }
+nav.main { display: flex; gap: 26px; margin-left: auto; }
+nav.main a { text-decoration: none; font-size: 14.5px; color: var(--muted); position: relative; padding-block: 6px; }
+nav.main a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--natural); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+nav.main a:hover { color: var(--carbon); }
+nav.main a:hover::after { transform: scaleX(1); }
+.langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); }
+.langs button { border: 0; background: transparent; color: var(--muted); font: 600 11.5px/1 var(--head); letter-spacing: .08em; padding: 8px 9px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s; }
+.langs button[aria-pressed="true"] { background: var(--bosque); color: #fff; }
+.bar .btn { padding: 12px 18px; font-size: 14px; }
+
+/* hero */
+.hero { padding: 8px 0 0; }
+.hero-frame { position: relative; border-radius: 28px; overflow: hidden; min-height: min(86svh, 780px); display: flex; align-items: flex-end; isolation: isolate; }
+.hero-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; animation: zoom 18s ease-out both; }
+.hero-frame::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(14,34,21,.82) 0%, rgba(14,34,21,.55) 42%, rgba(14,34,21,.05) 75%), linear-gradient(0deg, rgba(14,34,21,.6), transparent 45%); }
+@keyframes zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+.hero-copy { padding: 56px; max-width: 720px; color: #fff; }
+.hero-copy .eyebrow { color: #CFE6C4; }
+.hero-copy .eyebrow::before { background: var(--natural); }
+.hero h1 { font-size: clamp(44px, 7.2vw, 92px); font-weight: 800; letter-spacing: -.04em; line-height: .98; }
+.hero h1 em { color: var(--natural); }
+.hero .lead { color: rgba(255,255,255,.85); font-size: 18.5px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 34px 0 0; padding: 0; list-style: none; font-size: 14px; color: rgba(255,255,255,.88); }
+.facts li { display: flex; align-items: center; gap: 8px; }
+.facts svg { width: 16px; height: 16px; color: var(--natural); flex: none; }
+.hero-quote { position: absolute; right: 40px; bottom: 44px; max-width: 280px; color: #fff; text-align: right; font: italic 400 17px/1.45 var(--body); }
+.hero-quote::after { content: ""; display: block; width: 48px; height: 2px; background: var(--natural); margin: 14px 0 0 auto; }
+
+/* valores */
+.values { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+.values div { display: flex; align-items: center; gap: 14px; padding: 30px 8px; font: 600 12.5px/1.2 var(--head); letter-spacing: .2em; text-transform: uppercase; color: var(--bosque); }
+.values .ic { width: 46px; height: 46px; border-radius: 50%; background: var(--piedra); display: grid; place-items: center; color: var(--bosque); flex: none; }
+.values .ic svg { width: 21px; height: 21px; }
+
+/* césped */
+.grass-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 72px; align-items: center; }
+.ticks { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 14px; }
+.ticks li { display: flex; gap: 14px; align-items: flex-start; font-size: 16px; }
+.ticks li::before { content: ""; flex: none; width: 22px; height: 22px; margin-top: 1px; border-radius: 50%; background: var(--natural) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F2A17' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 13px no-repeat; }
+.calc { background: var(--bosque); color: #fff; border-radius: 28px; padding: 40px; position: relative; overflow: hidden; }
+.calc::after { content: ""; position: absolute; width: 260px; height: 260px; right: -90px; top: -90px; border-radius: 50%; background: radial-gradient(circle, rgba(104,176,77,.35), transparent 70%); pointer-events: none; }
+.calc h3 { font-size: 26px; margin-bottom: 6px; }
+.calc .sub { color: rgba(255,255,255,.72); font-size: 14.5px; margin: 0 0 28px; }
+.calc .lbl { font: 600 11px/1 var(--head); letter-spacing: .2em; text-transform: uppercase; color: var(--arena); margin-bottom: 12px; display: block; }
+.m2 { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.m2 output { font: 800 54px/1 var(--head); letter-spacing: -.04em; }
+.m2 span { font: 600 20px/1 var(--head); color: var(--natural); }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 99px; background: linear-gradient(90deg, var(--natural) var(--fill, 20%), rgba(255,255,255,.18) var(--fill, 20%)); outline-offset: 6px; margin: 10px 0 30px; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; border-radius: 50%; background: #fff; border: 6px solid var(--natural); cursor: grab; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 6px solid var(--natural); cursor: grab; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+.chips label { cursor: pointer; }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips span { display: inline-block; padding: 10px 15px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); font-size: 14px; transition: background .2s, border-color .2s, color .2s; }
+.chips input:checked + span { background: var(--natural); border-color: var(--natural); color: #0F2A17; font-weight: 600; }
+.chips input:focus-visible + span { outline: 2px solid #fff; outline-offset: 2px; }
+.calc .btn { width: 100%; }
+.calc .note { font-size: 13px; color: rgba(255,255,255,.62); margin: 14px 0 0; text-align: center; }
+
+/* servicios */
+.services { background: var(--piedra); }
+.svc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.svc { background: var(--card); border-radius: var(--r); overflow: hidden; display: flex; flex-direction: column; transition: transform .3s ease, box-shadow .3s ease; }
+.svc:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -28px rgba(24,58,36,.45); }
+.svc .ph { position: relative; aspect-ratio: 5 / 4; overflow: hidden; }
+.svc .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.svc:hover .ph img { transform: scale(1.05); }
+.svc .badge { position: absolute; left: 16px; bottom: -22px; width: 48px; height: 48px; border-radius: 50%; background: var(--bosque); color: #fff; display: grid; place-items: center; border: 3px solid var(--card); }
+.svc .badge svg { width: 22px; height: 22px; }
+.svc .ph { overflow: visible; }
+.svc .ph img { border-radius: 0; }
+.svc-body { padding: 36px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.svc h3 { font-size: 19px; color: var(--bosque); letter-spacing: -.015em; }
+.svc p { margin: 0; color: var(--muted); font-size: 14.5px; flex: 1; }
+.svc a { font: 600 14px/1 var(--body); color: var(--bosque); text-decoration: none; display: inline-flex; gap: 8px; align-items: center; padding-top: 8px; }
+.svc a svg { width: 16px; height: 16px; transition: transform .2s; }
+.svc a:hover svg { transform: translateX(3px); }
+.svc.star { outline: 2px solid var(--natural); outline-offset: -2px; }
+.svc .tag { position: absolute; top: 14px; right: 14px; background: var(--natural); color: #0F2A17; font: 700 10.5px/1 var(--head); letter-spacing: .14em; text-transform: uppercase; padding: 7px 10px; border-radius: 99px; }
+
+/* antes / después */
+.ba-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: center; }
+.ba { position: relative; aspect-ratio: 4 / 3; border-radius: 28px; overflow: hidden; user-select: none; background: var(--piedra); touch-action: pan-y; }
+.ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ba .after { clip-path: inset(0 0 0 var(--pos, 50%)); }
+.ba .handle { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; background: #fff; transform: translateX(-1px); pointer-events: none; }
+.ba .knob { position: absolute; top: 50%; left: 50%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; background: #fff; display: grid; place-items: center; color: var(--bosque); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+.ba .knob svg { width: 24px; height: 24px; }
+.ba .tag { position: absolute; bottom: 18px; font: 700 11px/1 var(--head); letter-spacing: .18em; padding: 9px 12px; border-radius: 99px; color: #fff; pointer-events: none; }
+.ba .tag.l { left: 18px; background: rgba(43,43,43,.82); } .ba .tag.r { right: 18px; background: var(--bosque); }
+.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+
+/* proyectos */
+.work { background: var(--card); }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.gallery figure { margin: 0; position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 3 / 4; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.gallery figure:hover img { transform: scale(1.05); }
+.gallery figcaption { position: absolute; inset: auto 0 0; padding: 48px 18px 18px; color: #fff; background: linear-gradient(transparent, rgba(14,34,21,.85)); font-size: 13.5px; }
+.gallery figcaption b { display: block; font: 700 17px/1.2 var(--head); letter-spacing: -.01em; margin-bottom: 2px; }
+
+/* para quién */
+.who { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
+.who div { padding: 32px 32px 8px 0; }
+.who div + div { padding-left: 32px; border-left: 1px solid var(--line); }
+.who .n { font: 700 13px/1 var(--head); color: var(--natural-ink); letter-spacing: .1em; }
+.who h3 { font-size: 22px; color: var(--bosque); margin: 14px 0 10px; }
+.who p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* proceso */
+.process { background: var(--piedra); }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; counter-reset: s; }
+.steps li { background: var(--card); border-radius: var(--r); padding: 28px 26px; counter-increment: s; position: relative; }
+.steps li::before { content: counter(s, decimal-leading-zero); font: 800 40px/1 var(--head); letter-spacing: -.04em; color: var(--natural); display: block; margin-bottom: 22px; }
+.steps b { display: block; font: 700 17px/1.3 var(--head); color: var(--bosque); margin-bottom: 6px; }
+.steps span { color: var(--muted); font-size: 14.5px; }
+
+/* faq */
+.faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: start; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0; font: 600 17.5px/1.35 var(--head); color: var(--carbon); letter-spacing: -.01em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary i { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); flex: none; position: relative; transition: transform .3s ease, background .3s; }
+.faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.6px; background: var(--bosque); transform: translate(-50%, -50%); }
+.faq summary i::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .3s; }
+.faq details[open] summary i { background: var(--natural); border-color: var(--natural); }
+.faq details[open] summary i::after { transform: translate(-50%, -50%) rotate(0deg); }
+.faq details p { margin: 0 0 24px; color: var(--muted); max-width: 40em; }
+
+/* contacto */
+.contact { background: var(--deep); color: #EEF1EA; position: relative; overflow: hidden; }
+.contact::before { content: ""; position: absolute; width: 620px; height: 620px; left: -220px; bottom: -320px; border-radius: 50%; background: radial-gradient(circle, rgba(104,176,77,.22), transparent 65%); }
+.contact .eyebrow { color: var(--arena); }
+.contact h2 { color: #fff; }
+.contact .lead { color: rgba(238,241,234,.75); }
+.c-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; position: relative; }
+.c-info { display: grid; gap: 16px; margin-top: 36px; }
+.c-info a, .c-info div { display: flex; gap: 14px; align-items: center; text-decoration: none; font-size: 16px; }
+.c-info .ic { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.08); color: var(--natural); flex: none; }
+.c-info .ic svg { width: 20px; height: 20px; }
+.c-info small { display: block; font: 600 10.5px/1.2 var(--head); letter-spacing: .2em; text-transform: uppercase; color: var(--arena); }
+form { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 28px; padding: 32px; display: grid; gap: 18px; }
+.f2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+form label { display: grid; gap: 8px; font: 600 10.5px/1.3 var(--head); letter-spacing: .2em; text-transform: uppercase; color: var(--arena); }
+form input, form select, form textarea { font: 400 16px/1.4 var(--body); color: #fff; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 14px 16px; width: 100%; min-width: 0; letter-spacing: 0; text-transform: none; transition: border-color .2s; }
+form input:focus, form select:focus, form textarea:focus { border-color: var(--natural); outline: none; }
+form select option { color: var(--carbon); }
+form textarea { resize: vertical; min-height: 104px; }
+form ::placeholder { color: rgba(255,255,255,.42); }
+.err { color: #F2C6A0; font-size: 14px; margin: -6px 0 0; }
+.err[hidden] { display: none; }
+
+footer { background: var(--deep); color: rgba(238,241,234,.6); font-size: 13.5px; border-top: 1px solid rgba(255,255,255,.08); }
+.f-row { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding-block: 30px; }
+footer .brand .word b { color: #fff; }
+footer .brand .word small { color: rgba(238,241,234,.55); }
+
+/* WhatsApp flotante */
+.wa-float { position: fixed; right: 22px; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); z-index: 50; display: flex; align-items: center; gap: 12px; }
+.wa-btn { width: 62px; height: 62px; border-radius: 50%; background: var(--wa); color: #fff; display: grid; place-items: center; box-shadow: 0 12px 28px -8px rgba(18,140,70,.65); position: relative; transition: transform .2s ease; text-decoration: none; }
+.wa-btn:hover { transform: scale(1.07); }
+.wa-btn svg { width: 31px; height: 31px; }
+.wa-btn::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--wa); animation: ring 2.6s ease-out infinite; }
+@keyframes ring { 0% { transform: scale(1); opacity: .7; } 80%, 100% { transform: scale(1.55); opacity: 0; } }
+.wa-tip { background: var(--card); color: var(--carbon); border-radius: 16px 16px 4px 16px; padding: 12px 36px 12px 16px; font-size: 14px; line-height: 1.35; box-shadow: 0 14px 34px -14px rgba(0,0,0,.35); max-width: 230px; position: relative; opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity .35s ease, transform .35s ease; }
+.wa-tip b { display: block; font-family: var(--head); font-size: 13.5px; color: var(--bosque); }
+.wa-tip.show { opacity: 1; transform: none; pointer-events: auto; }
+.wa-tip button { position: absolute; top: 6px; right: 6px; width: 26px; height: 26px; border: 0; background: transparent; color: var(--muted); font-size: 18px; line-height: 1; border-radius: 50%; cursor: pointer; }
+
+/* animación de entrada */
+.js .rv { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+.js .rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .rv { opacity: 1; transform: none; }
+}
+
+/* responsive */
+@media (max-width: 1080px) {
+  nav.main { display: none; }
+  .svc-grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grass-grid, .ba-grid, .faq-grid, .c-grid { grid-template-columns: 1fr; gap: 44px; }
+  .hero-quote { display: none; }
+}
+@media (max-width: 720px) {
+  .wrap { padding-inline: 16px; }
+  section { padding-block: 72px; }
+  .bar { height: 66px; gap: 10px; }
+  .brand .word small { display: none; }
+  .brand .mark { width: 36px; height: 36px; }
+  .brand .word b { font-size: 20px; }
+  .langs { margin-left: auto; }
+  .langs button { padding: 7px 7px; font-size: 11px; }
+  .bar .btn { display: none; }
+  .hero { padding-top: 4px; }
+  .hero-frame { border-radius: 22px; min-height: 84svh; }
+  .hero-frame::before { background: linear-gradient(0deg, rgba(14,34,21,.92) 0%, rgba(14,34,21,.6) 55%, rgba(14,34,21,.15) 100%); }
+  .hero-copy { padding: 28px 22px; }
+  .hero .lead { font-size: 16.5px; }
+  .cta-row .btn { flex: 1 1 100%; }
+  .values { grid-template-columns: repeat(2, 1fr); }
+  .values div { padding: 20px 4px; font-size: 11px; letter-spacing: .14em; gap: 10px; }
+  .values .ic { width: 38px; height: 38px; }
+  .calc { padding: 28px 22px; border-radius: 22px; }
+  .svc-grid, .steps, .f2 { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 74%; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: -16px; padding-inline: 16px; scrollbar-width: none; }
+  .gallery figure { scroll-snap-align: start; }
+  .who { grid-template-columns: 1fr; }
+  .who div, .who div + div { padding: 26px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .ba { aspect-ratio: 4 / 3.6; border-radius: 22px; }
+  form { padding: 22px; border-radius: 22px; }
+  footer { padding-bottom: 76px; }
+  .wa-float { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .wa-tip { max-width: 190px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></symbol>
+  <symbol id="i-mark" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="15" fill="#2F633F"/>
+    <path d="M21.5 24.5c-.3-8.3 4.6-13 13-14-.4 8.2-5.2 13-13 14z" fill="#68B04D"/>
+    <path d="M21.6 24.4c2.5-3.6 5.6-6.6 9.2-9" stroke="#2F633F" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M24.5 27.5v14.2c0 5-2.8 7.6-7.6 7.6-1.6 0-3-.3-4.3-.9l1.1-4.4c.8.4 1.7.6 2.6.6 2 0 2.9-1.1 2.9-3.4V27.5z" fill="#fff"/>
+    <path d="M30 27.5h9.3c5.7 0 9.2 3 9.2 7.8 0 3.2-1.6 5.6-4.3 6.8l4.9 7.1H43l-4.1-6.3h-3.6v6.3H30zm5.3 4.3v5.8h3.7c2.4 0 3.8-1.1 3.8-2.9 0-1.9-1.4-2.9-3.8-2.9z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C5 10 10 5 20 4c-.5 10-6 15-15 15z"/><path d="M5 19 13 11"/></g></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8z"/><path d="M12 11c0-4 3-7 8-7 0 4-3 7-8 7z"/></g></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M12 21 8 9l4-6 4 6z"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9-9.6C2 6.8 4.6 4 7.6 4c2 0 3.4 1.1 4.4 2.6C13 5.1 14.4 4 16.4 4c3 0 5.6 2.8 4.6 6.4-1.5 5-9 9.6-9 9.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-grass" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20c0-5-1-9-3-12 3 2 4.5 6 4.5 12"/><path d="M10 20c0-6 0-11 2-15 1 4 1 9 .5 15"/><path d="M15 20c.5-5 2-9 5-12-1.5 3.5-2.5 7.5-2.5 12"/></g></symbol>
+  <symbol id="i-deck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15 9 7h12l-6 8z"/><path d="M6 11h12M4.5 13h12"/><path d="M3 15v3h12v-3M21 7v3l-6 8"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lr" viewBox="0 0 24 24"><path d="M9 6 3 12l6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Jardiva">
+      <svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span class="word"><b>Jardiva</b><small data-i18n="tagline_small">ESTUDIO DE EXTERIORES</small></span>
+    </a>
+    <nav class="main" aria-label="Menú">
+      <a href="#cesped" data-i18n="nav_grass">Césped artificial</a>
+      <a href="#servicios" data-i18n="nav_services">Servicios</a>
+      <a href="#proyectos" data-i18n="nav_work">Proyectos</a>
+      <a href="#faq" data-i18n="nav_faq">Preguntas</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true" lang="es" title="Español">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false" lang="fr" title="Français">FR</button>
+      <button type="button" data-lang="de" aria-pressed="false" lang="de" title="Deutsch">DE</button>
+    </div>
+    <a class="btn btn-dark" data-wa="quote" href="https://wa.me/34631991523" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="cta_short">Presupuesto</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="hero-frame">
+        <img src="img/hero.jpg" alt="Terraza con pérgola, sofá exterior y piscina al atardecer" data-i18n-alt="hero_alt" fetchpriority="high">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Naturaleza · Diseño · Confort · Bienestar</p>
+          <h1 id="h1" data-i18n-html="hero_title">Espacios exteriores <em>para vivir.</em></h1>
+          <p class="lead" data-i18n="hero_lead">Césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Un solo equipo que diseña, instala y cuida tu jardín para que tú solo tengas que disfrutarlo.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" data-wa="quote" href="https://wa.me/34631991523" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="cta_quote">Pide presupuesto por WhatsApp</span></a>
+            <a class="btn btn-ghost" href="#cesped"><span data-i18n="cta_calc">Calcula tu césped</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <ul class="facts">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="fact1">Presupuesto sin compromiso</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="fact2">Precio cerrado por escrito</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="fact3">Trabajo limpio y puntual</span></li>
+          </ul>
+        </div>
+        <p class="hero-quote" data-i18n="hero_quote">“Más que jardines, creamos espacios para vivir.”</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap values rv" aria-label="Valores">
+    <div><span class="ic"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span><span data-i18n="v1">Naturaleza</span></div>
+    <div><span class="ic"><svg aria-hidden="true"><use href="#i-sprout"/></svg></span><span data-i18n="v2">Diseño</span></div>
+    <div><span class="ic"><svg aria-hidden="true"><use href="#i-gem"/></svg></span><span data-i18n="v3">Calidad</span></div>
+    <div><span class="ic"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><span data-i18n="v4">Bienestar</span></div>
+  </div>
+
+  <section id="cesped" aria-labelledby="h-grass">
+    <div class="wrap grass-grid">
+      <div class="rv">
+        <p class="eyebrow" data-i18n="g_eyebrow">Nuestra especialidad</p>
+        <h2 id="h-grass" data-i18n-html="g_title">Césped artificial que <em>parece de verdad</em></h2>
+        <p class="lead" data-i18n="g_lead">Verde todo el año, sin riego, sin cortes y sin barro. Lo instalamos sobre una base compactada y drenante para que quede perfecto durante años.</p>
+        <ul class="ticks">
+          <li data-i18n="g_b1">Ahorra agua: cero riego, también en verano</li>
+          <li data-i18n="g_b2">Modelos aptos para niños y mascotas</li>
+          <li data-i18n="g_b3">Base drenante: seco poco después de llover</li>
+          <li data-i18n="g_b4">Para jardines, terrazas, áticos y zonas de piscina</li>
+        </ul>
+      </div>
+      <div class="calc rv" id="calc">
+        <h3 data-i18n="calc_title">Tu presupuesto en 30 segundos</h3>
+        <p class="sub" data-i18n="calc_sub">Indica los metros y el uso. Te llega a WhatsApp con todo listo para enviar.</p>
+        <span class="lbl" id="m2-lbl" data-i18n="calc_m2">Superficie aproximada</span>
+        <div class="m2"><output id="m2-out" for="m2">50</output><span>m²</span></div>
+        <input type="range" id="m2" min="10" max="500" step="5" value="50" aria-labelledby="m2-lbl">
+        <span class="lbl" id="use-lbl" data-i18n="calc_use">¿Para qué lo usarás?</span>
+        <div class="chips" role="radiogroup" aria-labelledby="use-lbl">
+          <label><input type="radio" name="use" value="use_family" checked><span data-i18n="use_family">Familia y niños</span></label>
+          <label><input type="radio" name="use" value="use_pets"><span data-i18n="use_pets">Mascotas</span></label>
+          <label><input type="radio" name="use" value="use_pool"><span data-i18n="use_pool">Zona de piscina</span></label>
+          <label><input type="radio" name="use" value="use_terrace"><span data-i18n="use_terrace">Terraza o ático</span></label>
+          <label><input type="radio" name="use" value="use_deco"><span data-i18n="use_deco">Decorativo</span></label>
+        </div>
+        <a class="btn btn-primary" id="calc-link" href="https://wa.me/34631991523" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="calc_cta">Enviar por WhatsApp</span></a>
+        <p class="note" data-i18n="calc_note">Te respondemos con una propuesta y, si quieres, quedamos para medir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicios" aria-labelledby="h-svc">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow" data-i18n="svc_eyebrow">Nuestros servicios</p>
+        <h2 id="h-svc" data-i18n="svc_title">Todo tu exterior, en las mismas manos</h2>
+        <p class="lead" data-i18n="svc_lead">Elige un servicio o combínalos. Te respondemos por WhatsApp con una propuesta clara.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc rv"><div class="ph"><img src="img/serv1.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span></div><div class="svc-body"><h3 data-i18n="s1_t">Mantenimiento de jardines</h3><p data-i18n="s1_d">Poda, corte de césped, limpieza y cuidado de plantas con visitas periódicas.</p><a data-wa="s1" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc star rv"><div class="ph"><img src="img/serv2.jpg" alt="" loading="lazy"><span class="tag" data-i18n="star">Especialidad</span><span class="badge"><svg aria-hidden="true"><use href="#i-grass"/></svg></span></div><div class="svc-body"><h3 data-i18n="s2_t">Césped artificial</h3><p data-i18n="s2_d">Instalación de aspecto natural, resistente y de bajo mantenimiento. Ideal para jardines, terrazas y piscinas.</p><a data-wa="s2" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc rv"><div class="ph"><img src="img/serv3.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-deck"/></svg></span></div><div class="svc-body"><h3 data-i18n="s3_t">Tarimas composite</h3><p data-i18n="s3_d">Suelos exteriores elegantes que no se pudren ni astillan. Perfectos para terrazas y zonas de descanso.</p><a data-wa="s3" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc rv"><div class="ph"><img src="img/serv4.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-sprout"/></svg></span></div><div class="svc-body"><h3 data-i18n="s4_t">Decoración de exteriores</h3><p data-i18n="s4_d">Plantas, piedra, iluminación y mobiliario en armonía con tu jardín o terraza.</p><a data-wa="s4" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="antes-despues" aria-labelledby="h-ba">
+    <div class="wrap ba-grid">
+      <div class="rv">
+        <p class="eyebrow" data-i18n="ba_eyebrow">Antes y después</p>
+        <h2 id="h-ba" data-i18n="ba_title">De un espacio desaprovechado a un lugar para vivir</h2>
+        <p class="lead" data-i18n="ba_lead">Desliza para ver la transformación: césped artificial, tarima composite e iluminación en un mismo proyecto.</p>
+        <ul class="ticks">
+          <li data-i18n="ba_1">Césped artificial sobre base drenante</li>
+          <li data-i18n="ba_2">Pasarela de tarima composite</li>
+          <li data-i18n="ba_3">Iluminación ambiental y plantas mediterráneas</li>
+        </ul>
+      </div>
+      <div class="ba rv" id="ba">
+        <img src="img/antes.jpg" alt="Jardín antes de la reforma" data-i18n-alt="before_alt" loading="lazy">
+        <img class="after" src="img/despues.jpg" alt="Jardín después de la reforma" data-i18n-alt="after_alt" loading="lazy">
+        <span class="tag l" data-i18n="before">ANTES</span>
+        <span class="tag r" data-i18n="after">DESPUÉS</span>
+        <div class="handle"><span class="knob"><svg aria-hidden="true"><use href="#i-lr"/></svg></span></div>
+        <input id="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" data-i18n-aria="ba_aria">
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="proyectos" aria-labelledby="h-work">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow" data-i18n="work_eyebrow">Proyectos</p>
+        <h2 id="h-work" data-i18n="work_title">Exteriores que ya se disfrutan</h2>
+      </div>
+      <div class="gallery">
+        <figure class="rv"><img src="img/foto1.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w1_t">Sendero iluminado</b><span data-i18n="w1_d">Losas, plantas y luz</span></figcaption></figure>
+        <figure class="rv"><img src="img/foto2.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w2_t">Zona de piscina</b><span data-i18n="w2_d">Borde de piscina y jardín</span></figcaption></figure>
+        <figure class="rv"><img src="img/foto3.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w3_t">Tarima y grava</b><span data-i18n="w3_d">Composite con jardín seco</span></figcaption></figure>
+        <figure class="rv"><img src="img/foto4.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w4_t">Rincón chill-out</b><span data-i18n="w4_d">Mobiliario, plantas y luz</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="para-quien" aria-labelledby="h-who">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow" data-i18n="who_eyebrow">Para quién trabajamos</p>
+        <h2 id="h-who" data-i18n="who_title">Particulares, comunidades y negocios</h2>
+      </div>
+      <div class="who rv">
+        <div><span class="n">01</span><h3 data-i18n="who1_t">Casas, chalets y fincas</h3><p data-i18n="who1_d">Jardines privados para disfrutar sin dedicarles los fines de semana.</p></div>
+        <div><span class="n">02</span><h3 data-i18n="who2_t">Comunidades de vecinos</h3><p data-i18n="who2_d">Zonas comunes, piscinas y jardines con mantenimiento periódico.</p></div>
+        <div><span class="n">03</span><h3 data-i18n="who3_t">Restaurantes, hoteles y negocios</h3><p data-i18n="who3_d">Terrazas y exteriores que atraen clientes y aguantan el uso diario.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="proceso" aria-labelledby="h-proc">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow" data-i18n="proc_eyebrow">Cómo trabajamos</p>
+        <h2 id="h-proc" data-i18n="proc_title">Fácil, de principio a fin</h2>
+      </div>
+      <ol class="steps">
+        <li class="rv"><b data-i18n="p1_t">Nos escribes</b><span data-i18n="p1_d">Por WhatsApp, con una foto de tu espacio y los metros aproximados.</span></li>
+        <li class="rv"><b data-i18n="p2_t">Visita y propuesta</b><span data-i18n="p2_d">Medimos y te enviamos un presupuesto cerrado, sin sorpresas.</span></li>
+        <li class="rv"><b data-i18n="p3_t">Instalación</b><span data-i18n="p3_d">En la fecha acordada, y dejamos todo limpio.</span></li>
+        <li class="rv"><b data-i18n="p4_t">Mantenimiento</b><span data-i18n="p4_d">Un plan opcional para que tu exterior siga perfecto.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="h-faq">
+    <div class="wrap faq-grid">
+      <div class="rv">
+        <p class="eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</p>
+        <h2 id="h-faq" data-i18n="faq_title">Lo que más nos preguntan</h2>
+        <p class="lead" data-i18n="faq_lead">¿Tienes otra duda? Escríbenos y te respondemos personalmente.</p>
+      </div>
+      <div class="rv">
+        <details><summary><span data-i18n="q1">¿Cuánto dura el césped artificial?</span><i aria-hidden="true"></i></summary><p data-i18n="a1">Un césped de calidad bien instalado suele durar entre 8 y 15 años, según el uso y las horas de sol. Te asesoramos sobre el modelo adecuado para tu espacio.</p></details>
+        <details><summary><span data-i18n="q2">¿Es apto para niños y perros?</span><i aria-hidden="true"></i></summary><p data-i18n="a2">Sí. Elegimos modelos aptos para niños y mascotas y los instalamos sobre base drenante: el agua se evacúa y se limpia fácilmente con un enjuague de manguera.</p></details>
+        <details><summary><span data-i18n="q3">¿Se calienta en verano?</span><i aria-hidden="true"></i></summary><p data-i18n="a3">Como cualquier superficie al sol, se calienta. Te recomendamos modelos que acumulan menos calor y un riego breve los días más calurosos.</p></details>
+        <details><summary><span data-i18n="q4">¿Cuánto cuesta?</span><i aria-hidden="true"></i></summary><p data-i18n="a4">Depende de los metros, el modelo y el estado del terreno. Envíanos los metros aproximados y una foto por WhatsApp y te damos un precio cerrado y sin compromiso.</p></details>
+        <details><summary><span data-i18n="q5">¿En qué zonas trabajáis?</span><i aria-hidden="true"></i></summary><p data-i18n="a5">Trabajamos en España. Escríbenos con tu localidad y te confirmamos disponibilidad y fechas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto" aria-labelledby="h-contact">
+    <div class="wrap c-grid">
+      <div class="rv">
+        <p class="eyebrow" data-i18n="c_eyebrow">Contacto</p>
+        <h2 id="h-contact" data-i18n="c_title">Cuéntanos qué exterior imaginas</h2>
+        <p class="lead" data-i18n="c_lead">Escríbenos por WhatsApp con una foto de tu espacio. Puedes hacerlo en español, inglés, francés o alemán.</p>
+        <div class="c-info">
+          <a data-wa="general" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small>+34 631 99 15 23</span></a>
+          <div><span class="ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span><small data-i18n="c_zone_l">Zona</small><span data-i18n="c_zone">Servicio en España</span></span></div>
+        </div>
+      </div>
+      <form id="lead" class="rv" novalidate>
+        <div class="f2">
+          <label for="f-name"><span data-i18n="l_name">Nombre</span><input id="f-name" autocomplete="name" required></label>
+          <label for="f-town"><span data-i18n="l_town">Localidad</span><input id="f-town" autocomplete="address-level2"></label>
+        </div>
+        <label for="f-svc"><span data-i18n="l_svc">Servicio</span>
+          <select id="f-svc">
+            <option value="s2" data-i18n="s2_t">Césped artificial</option>
+            <option value="s1" data-i18n="s1_t">Mantenimiento de jardines</option>
+            <option value="s3" data-i18n="s3_t">Tarimas composite</option>
+            <option value="s4" data-i18n="s4_t">Decoración de exteriores</option>
+          </select>
+        </label>
+        <label for="f-msg"><span data-i18n="l_msg">Tu proyecto</span><textarea id="f-msg" data-i18n-ph="ph_msg" placeholder="Metros aproximados, qué te gustaría cambiar…"></textarea></label>
+        <p class="err" id="err" hidden data-i18n="need_name">Escribe tu nombre para preparar el mensaje.</p>
+        <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="send">Enviar por WhatsApp</span></button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap f-row">
+    <a class="brand" href="#inicio" aria-label="Jardiva">
+      <svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span class="word"><b>Jardiva</b><small data-i18n="tagline_small">ESTUDIO DE EXTERIORES</small></span>
+    </a>
+    <span data-i18n="foot2">Jardinería · Césped artificial · Composite · Decoración</span>
+    <span>© <span id="yr">2026</span> Jardiva</span>
+  </div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-tip" id="wa-tip" role="status"><b data-i18n="tip_t">¿Hablamos?</b><span data-i18n="tip_d">Escríbenos y te respondemos por WhatsApp.</span><button type="button" id="tip-x" aria-label="Cerrar" data-i18n-aria="close">×</button></div>
+  <a class="wa-btn" data-wa="general" href="https://wa.me/34631991523" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+</div>
+
+<script>
+document.documentElement.classList.add("js");
+const WA_NUMBER = "34631991523";
+const LANGS = ["es", "en", "fr", "de"];
+
+const T = {
+es: {
+  meta_title: "Jardiva · Césped artificial y jardines en España",
+  meta_desc: "Jardiva, estudio de exteriores: césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Presupuesto por WhatsApp.",
+  tagline_small: "ESTUDIO DE EXTERIORES",
+  nav_grass: "Césped artificial", nav_services: "Servicios", nav_work: "Proyectos", nav_faq: "Preguntas", nav_contact: "Contacto",
+  cta_short: "Presupuesto",
+  hero_eyebrow: "Naturaleza · Diseño · Confort · Bienestar",
+  hero_title: "Espacios exteriores <em>para vivir.</em>",
+  hero_lead: "Césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Un solo equipo que diseña, instala y cuida tu jardín para que tú solo tengas que disfrutarlo.",
+  hero_alt: "Terraza con pérgola, sofá exterior y piscina al atardecer",
+  cta_quote: "Pide presupuesto por WhatsApp", cta_calc: "Calcula tu césped",
+  fact1: "Presupuesto sin compromiso", fact2: "Precio cerrado por escrito", fact3: "Trabajo limpio y puntual",
+  hero_quote: "“Más que jardines, creamos espacios para vivir.”",
+  v1: "Naturaleza", v2: "Diseño", v3: "Calidad", v4: "Bienestar",
+  g_eyebrow: "Nuestra especialidad", g_title: "Césped artificial que <em>parece de verdad</em>",
+  g_lead: "Verde todo el año, sin riego, sin cortes y sin barro. Lo instalamos sobre una base compactada y drenante para que quede perfecto durante años.",
+  g_b1: "Ahorra agua: cero riego, también en verano", g_b2: "Modelos aptos para niños y mascotas",
+  g_b3: "Base drenante: seco poco después de llover", g_b4: "Para jardines, terrazas, áticos y zonas de piscina",
+  calc_title: "Tu presupuesto en 30 segundos", calc_sub: "Indica los metros y el uso. Te llega a WhatsApp con todo listo para enviar.",
+  calc_m2: "Superficie aproximada", calc_use: "¿Para qué lo usarás?",
+  use_family: "Familia y niños", use_pets: "Mascotas", use_pool: "Zona de piscina", use_terrace: "Terraza o ático", use_deco: "Decorativo",
+  calc_cta: "Enviar por WhatsApp", calc_note: "Te respondemos con una propuesta y, si quieres, quedamos para medir.",
+  svc_eyebrow: "Nuestros servicios", svc_title: "Todo tu exterior, en las mismas manos",
+  svc_lead: "Elige un servicio o combínalos. Te respondemos por WhatsApp con una propuesta clara.",
+  s1_t: "Mantenimiento de jardines", s1_d: "Poda, corte de césped, limpieza y cuidado de plantas con visitas periódicas.",
+  s2_t: "Césped artificial", s2_d: "Instalación de aspecto natural, resistente y de bajo mantenimiento. Ideal para jardines, terrazas y piscinas.",
+  s3_t: "Tarimas composite", s3_d: "Suelos exteriores elegantes que no se pudren ni astillan. Perfectos para terrazas y zonas de descanso.",
+  s4_t: "Decoración de exteriores", s4_d: "Plantas, piedra, iluminación y mobiliario en armonía con tu jardín o terraza.",
+  ask: "Consultar", star: "Especialidad",
+  ba_eyebrow: "Antes y después", ba_title: "De un espacio desaprovechado a un lugar para vivir",
+  ba_lead: "Desliza para ver la transformación: césped artificial, tarima composite e iluminación en un mismo proyecto.",
+  ba_1: "Césped artificial sobre base drenante", ba_2: "Pasarela de tarima composite", ba_3: "Iluminación ambiental y plantas mediterráneas",
+  before: "ANTES", after: "DESPUÉS", ba_aria: "Comparar antes y después",
+  before_alt: "Jardín antes de la reforma", after_alt: "Jardín después de la reforma",
+  work_eyebrow: "Proyectos", work_title: "Exteriores que ya se disfrutan",
+  w1_t: "Sendero iluminado", w1_d: "Losas, plantas y luz", w2_t: "Zona de piscina", w2_d: "Borde de piscina y jardín",
+  w3_t: "Tarima y grava", w3_d: "Composite con jardín seco", w4_t: "Rincón chill-out", w4_d: "Mobiliario, plantas y luz",
+  who_eyebrow: "Para quién trabajamos", who_title: "Particulares, comunidades y negocios",
+  who1_t: "Casas, chalets y fincas", who1_d: "Jardines privados para disfrutar sin dedicarles los fines de semana.",
+  who2_t: "Comunidades de vecinos", who2_d: "Zonas comunes, piscinas y jardines con mantenimiento periódico.",
+  who3_t: "Restaurantes, hoteles y negocios", who3_d: "Terrazas y exteriores que atraen clientes y aguantan el uso diario.",
+  proc_eyebrow: "Cómo trabajamos", proc_title: "Fácil, de principio a fin",
+  p1_t: "Nos escribes", p1_d: "Por WhatsApp, con una foto de tu espacio y los metros aproximados.",
+  p2_t: "Visita y propuesta", p2_d: "Medimos y te enviamos un presupuesto cerrado, sin sorpresas.",
+  p3_t: "Instalación", p3_d: "En la fecha acordada, y dejamos todo limpio.",
+  p4_t: "Mantenimiento", p4_d: "Un plan opcional para que tu exterior siga perfecto.",
+  faq_eyebrow: "Preguntas frecuentes", faq_title: "Lo que más nos preguntan", faq_lead: "¿Tienes otra duda? Escríbenos y te respondemos personalmente.",
+  q1: "¿Cuánto dura el césped artificial?", a1: "Un césped de calidad bien instalado suele durar entre 8 y 15 años, según el uso y las horas de sol. Te asesoramos sobre el modelo adecuado para tu espacio.",
+  q2: "¿Es apto para niños y perros?", a2: "Sí. Elegimos modelos aptos para niños y mascotas y los instalamos sobre base drenante: el agua se evacúa y se limpia fácilmente con un enjuague de manguera.",
+  q3: "¿Se calienta en verano?", a3: "Como cualquier superficie al sol, se calienta. Te recomendamos modelos que acumulan menos calor y un riego breve los días más calurosos.",
+  q4: "¿Cuánto cuesta?", a4: "Depende de los metros, el modelo y el estado del terreno. Envíanos los metros aproximados y una foto por WhatsApp y te damos un precio cerrado y sin compromiso.",
+  q5: "¿En qué zonas trabajáis?", a5: "Trabajamos en España. Escríbenos con tu localidad y te confirmamos disponibilidad y fechas.",
+  c_eyebrow: "Contacto", c_title: "Cuéntanos qué exterior imaginas",
+  c_lead: "Escríbenos por WhatsApp con una foto de tu espacio. Puedes hacerlo en español, inglés, francés o alemán.",
+  c_zone_l: "Zona", c_zone: "Servicio en España",
+  l_name: "Nombre", l_town: "Localidad", l_svc: "Servicio", l_msg: "Tu proyecto",
+  ph_msg: "Metros aproximados, qué te gustaría cambiar…", send: "Enviar por WhatsApp",
+  need_name: "Escribe tu nombre para preparar el mensaje.",
+  foot2: "Jardinería · Césped artificial · Composite · Decoración",
+  tip_t: "¿Hablamos?", tip_d: "Escríbenos y te respondemos por WhatsApp.", close: "Cerrar",
+  wa_general: "Hola Jardiva, me gustaría información sobre vuestros servicios.",
+  wa_quote: "Hola Jardiva, quiero pedir un presupuesto para mi exterior.",
+  wa_svc: (s) => `Hola Jardiva, me interesa el servicio de: ${s}.`,
+  wa_calc: (m, u) => `Hola Jardiva, quiero presupuesto de césped artificial.\n• Superficie: ${m} m²\n• Uso: ${u}`,
+  wa_form: (n, t, s, m) => `Hola Jardiva, soy ${n}${t ? " de " + t : ""}.\nMe interesa: ${s}.${m ? "\n" + m : ""}`
+},
+en: {
+  meta_title: "Jardiva · Artificial grass & garden design in Spain",
+  meta_desc: "Jardiva, outdoor design studio: artificial grass, garden maintenance, composite decking and outdoor styling. Get a quote on WhatsApp.",
+  tagline_small: "OUTDOOR DESIGN STUDIO",
+  nav_grass: "Artificial grass", nav_services: "Services", nav_work: "Projects", nav_faq: "FAQ", nav_contact: "Contact",
+  cta_short: "Get a quote",
+  hero_eyebrow: "Nature · Design · Comfort · Wellbeing",
+  hero_title: "Outdoor spaces <em>made for living.</em>",
+  hero_lead: "Artificial grass, garden maintenance, composite decking and outdoor styling. One team that designs, installs and looks after your garden, so all you have to do is enjoy it.",
+  hero_alt: "Terrace with pergola, outdoor sofa and pool at sunset",
+  cta_quote: "Get a quote on WhatsApp", cta_calc: "Size up your lawn",
+  fact1: "Free, no-obligation quote", fact2: "Fixed price in writing", fact3: "Tidy, punctual work",
+  hero_quote: "“More than gardens — we create spaces for living.”",
+  v1: "Nature", v2: "Design", v3: "Quality", v4: "Wellbeing",
+  g_eyebrow: "Our speciality", g_title: "Artificial grass that <em>looks the real thing</em>",
+  g_lead: "Green all year round — no watering, no mowing, no mud. We lay it on a compacted, free-draining base so it stays perfect for years.",
+  g_b1: "Saves water: no watering, even in summer", g_b2: "Child- and pet-friendly options",
+  g_b3: "Free-draining base: dry soon after rain", g_b4: "For gardens, terraces, roof terraces and pool areas",
+  calc_title: "Your quote in 30 seconds", calc_sub: "Tell us the size and how you'll use it. It opens in WhatsApp, ready to send.",
+  calc_m2: "Approximate area", calc_use: "How will you use it?",
+  use_family: "Family & kids", use_pets: "Pets", use_pool: "Pool area", use_terrace: "Terrace or roof terrace", use_deco: "Decorative",
+  calc_cta: "Send on WhatsApp", calc_note: "We reply with a proposal and, if you like, arrange a visit to measure up.",
+  svc_eyebrow: "Our services", svc_title: "Your whole outdoor space, in one pair of hands",
+  svc_lead: "Choose one service or combine them. We reply on WhatsApp with a clear proposal.",
+  s1_t: "Garden maintenance", s1_d: "Pruning, mowing, clearing and plant care with regular visits.",
+  s2_t: "Artificial grass", s2_d: "Natural-looking, hard-wearing and low-maintenance. Ideal for gardens, terraces and pools.",
+  s3_t: "Composite decking", s3_d: "Elegant outdoor flooring that won't rot or splinter. Perfect for terraces and lounge areas.",
+  s4_t: "Outdoor styling", s4_d: "Plants, stone, lighting and furniture in harmony with your garden or terrace.",
+  ask: "Enquire", star: "Speciality",
+  ba_eyebrow: "Before and after", ba_title: "From wasted space to a place for living",
+  ba_lead: "Slide to see the transformation: artificial grass, composite decking and lighting in a single project.",
+  ba_1: "Artificial grass on a free-draining base", ba_2: "Composite decking walkway", ba_3: "Ambient lighting and Mediterranean planting",
+  before: "BEFORE", after: "AFTER", ba_aria: "Compare before and after",
+  before_alt: "Garden before the makeover", after_alt: "Garden after the makeover",
+  work_eyebrow: "Projects", work_title: "Outdoor spaces already being enjoyed",
+  w1_t: "Lit garden path", w1_d: "Paving, plants and light", w2_t: "Pool area", w2_d: "Pool edge and garden",
+  w3_t: "Decking and gravel", w3_d: "Composite with a dry garden", w4_t: "Chill-out corner", w4_d: "Furniture, plants and light",
+  who_eyebrow: "Who we work with", who_title: "Homeowners, communities and businesses",
+  who1_t: "Houses, villas and estates", who1_d: "Private gardens to enjoy without giving up your weekends.",
+  who2_t: "Residents' communities", who2_d: "Shared areas, pools and gardens with regular maintenance.",
+  who3_t: "Restaurants, hotels and businesses", who3_d: "Terraces and outdoor areas that attract customers and stand up to daily use.",
+  proc_eyebrow: "How we work", proc_title: "Easy from start to finish",
+  p1_t: "You message us", p1_d: "On WhatsApp, with a photo of your space and the rough size.",
+  p2_t: "Visit and proposal", p2_d: "We measure up and send you a fixed-price quote — no surprises.",
+  p3_t: "Installation", p3_d: "On the agreed date, and we leave everything clean.",
+  p4_t: "Maintenance", p4_d: "An optional plan to keep your outdoor space looking perfect.",
+  faq_eyebrow: "FAQ", faq_title: "What people ask us most", faq_lead: "Got another question? Message us and we'll answer personally.",
+  q1: "How long does artificial grass last?", a1: "Quality grass, properly installed, usually lasts 8 to 15 years depending on use and sun exposure. We'll advise you on the right product for your space.",
+  q2: "Is it safe for children and dogs?", a2: "Yes. We choose child- and pet-friendly products and lay them on a free-draining base, so water drains away and a quick rinse with the hose keeps it clean.",
+  q3: "Does it get hot in summer?", a3: "Like any surface in the sun, it warms up. We recommend products that retain less heat and a quick spray of water on the hottest days.",
+  q4: "How much does it cost?", a4: "It depends on the area, the product and the state of the ground. Send us the rough size and a photo on WhatsApp and we'll give you a fixed, no-obligation price.",
+  q5: "Which areas do you cover?", a5: "We work in Spain. Message us with your town and we'll confirm availability and dates.",
+  c_eyebrow: "Contact", c_title: "Tell us about the outdoor space you have in mind",
+  c_lead: "Message us on WhatsApp with a photo of your space. You can write in English, Spanish, French or German.",
+  c_zone_l: "Area", c_zone: "Serving Spain",
+  l_name: "Name", l_town: "Town", l_svc: "Service", l_msg: "Your project",
+  ph_msg: "Approximate size, what you'd like to change…", send: "Send on WhatsApp",
+  need_name: "Add your name to prepare the message.",
+  foot2: "Gardening · Artificial grass · Composite · Styling",
+  tip_t: "Shall we talk?", tip_d: "Message us and we'll reply on WhatsApp.", close: "Close",
+  wa_general: "Hello Jardiva, I'd like some information about your services.",
+  wa_quote: "Hello Jardiva, I'd like a quote for my outdoor space.",
+  wa_svc: (s) => `Hello Jardiva, I'm interested in: ${s}.`,
+  wa_calc: (m, u) => `Hello Jardiva, I'd like a quote for artificial grass.\n• Area: ${m} m²\n• Use: ${u}`,
+  wa_form: (n, t, s, m) => `Hello Jardiva, my name is ${n}${t ? " from " + t : ""}.\nI'm interested in: ${s}.${m ? "\n" + m : ""}`
+},
+fr: {
+  meta_title: "Jardiva · Gazon synthétique et jardins en Espagne",
+  meta_desc: "Jardiva, studio d'aménagement extérieur : gazon synthétique, entretien de jardins, terrasses en composite et décoration extérieure. Devis sur WhatsApp.",
+  tagline_small: "STUDIO D'EXTÉRIEURS",
+  nav_grass: "Gazon synthétique", nav_services: "Services", nav_work: "Réalisations", nav_faq: "Questions", nav_contact: "Contact",
+  cta_short: "Devis",
+  hero_eyebrow: "Nature · Design · Confort · Bien-être",
+  hero_title: "Des espaces extérieurs <em>pour vivre.</em>",
+  hero_lead: "Gazon synthétique, entretien de jardins, terrasses en composite et décoration extérieure. Une seule équipe qui conçoit, installe et entretient votre jardin, pour que vous n'ayez plus qu'à en profiter.",
+  hero_alt: "Terrasse avec pergola, canapé d'extérieur et piscine au coucher du soleil",
+  cta_quote: "Demander un devis sur WhatsApp", cta_calc: "Estimer mon gazon",
+  fact1: "Devis gratuit et sans engagement", fact2: "Prix ferme par écrit", fact3: "Chantier propre et ponctuel",
+  hero_quote: "« Plus que des jardins, nous créons des espaces pour vivre. »",
+  v1: "Nature", v2: "Design", v3: "Qualité", v4: "Bien-être",
+  g_eyebrow: "Notre spécialité", g_title: "Un gazon synthétique <em>plus vrai que nature</em>",
+  g_lead: "Vert toute l'année, sans arrosage, sans tonte et sans boue. Nous le posons sur une base compactée et drainante pour qu'il reste parfait pendant des années.",
+  g_b1: "Économie d'eau : zéro arrosage, même en été", g_b2: "Modèles adaptés aux enfants et aux animaux",
+  g_b3: "Base drainante : sec peu après la pluie", g_b4: "Pour jardins, terrasses, toits-terrasses et abords de piscine",
+  calc_title: "Votre devis en 30 secondes", calc_sub: "Indiquez la surface et l'usage. Le message s'ouvre dans WhatsApp, prêt à envoyer.",
+  calc_m2: "Surface approximative", calc_use: "Pour quel usage ?",
+  use_family: "Famille et enfants", use_pets: "Animaux", use_pool: "Abords de piscine", use_terrace: "Terrasse ou toit-terrasse", use_deco: "Décoratif",
+  calc_cta: "Envoyer sur WhatsApp", calc_note: "Nous vous répondons avec une proposition et, si vous le souhaitez, venons prendre les mesures.",
+  svc_eyebrow: "Nos services", svc_title: "Tout votre extérieur entre les mêmes mains",
+  svc_lead: "Choisissez un service ou combinez-les. Nous vous répondons sur WhatsApp avec une proposition claire.",
+  s1_t: "Entretien de jardins", s1_d: "Taille, tonte, nettoyage et soin des plantes avec des visites régulières.",
+  s2_t: "Gazon synthétique", s2_d: "Aspect naturel, résistant et peu d'entretien. Idéal pour jardins, terrasses et piscines.",
+  s3_t: "Terrasses en composite", s3_d: "Des sols extérieurs élégants qui ne pourrissent pas et ne s'écaillent pas. Parfaits pour terrasses et coins détente.",
+  s4_t: "Décoration extérieure", s4_d: "Plantes, pierre, éclairage et mobilier en harmonie avec votre jardin ou votre terrasse.",
+  ask: "Se renseigner", star: "Spécialité",
+  ba_eyebrow: "Avant / après", ba_title: "D'un espace délaissé à un lieu de vie",
+  ba_lead: "Faites glisser pour voir la transformation : gazon synthétique, terrasse en composite et éclairage dans un même projet.",
+  ba_1: "Gazon synthétique sur base drainante", ba_2: "Allée en lames composites", ba_3: "Éclairage d'ambiance et plantes méditerranéennes",
+  before: "AVANT", after: "APRÈS", ba_aria: "Comparer avant et après",
+  before_alt: "Jardin avant les travaux", after_alt: "Jardin après les travaux",
+  work_eyebrow: "Réalisations", work_title: "Des extérieurs dont on profite déjà",
+  w1_t: "Allée éclairée", w1_d: "Dalles, plantes et lumière", w2_t: "Espace piscine", w2_d: "Plage de piscine et jardin",
+  w3_t: "Terrasse et gravier", w3_d: "Composite et jardin sec", w4_t: "Coin détente", w4_d: "Mobilier, plantes et lumière",
+  who_eyebrow: "Pour qui nous travaillons", who_title: "Particuliers, copropriétés et professionnels",
+  who1_t: "Maisons, villas et domaines", who1_d: "Des jardins privés à savourer sans y passer tous vos week-ends.",
+  who2_t: "Copropriétés", who2_d: "Espaces communs, piscines et jardins avec un entretien régulier.",
+  who3_t: "Restaurants, hôtels et commerces", who3_d: "Des terrasses et extérieurs qui attirent la clientèle et résistent à l'usage quotidien.",
+  proc_eyebrow: "Notre méthode", proc_title: "Simple, du début à la fin",
+  p1_t: "Vous nous écrivez", p1_d: "Sur WhatsApp, avec une photo de votre espace et la surface approximative.",
+  p2_t: "Visite et proposition", p2_d: "Nous prenons les mesures et vous envoyons un devis à prix ferme, sans surprise.",
+  p3_t: "Installation", p3_d: "À la date convenue, et nous laissons tout propre.",
+  p4_t: "Entretien", p4_d: "Une formule en option pour que votre extérieur reste parfait.",
+  faq_eyebrow: "Questions fréquentes", faq_title: "Ce que l'on nous demande le plus", faq_lead: "Une autre question ? Écrivez-nous, nous vous répondrons personnellement.",
+  q1: "Combien de temps dure un gazon synthétique ?", a1: "Un gazon de qualité bien posé dure en général de 8 à 15 ans, selon l'usage et l'ensoleillement. Nous vous conseillons le modèle adapté à votre espace.",
+  q2: "Convient-il aux enfants et aux chiens ?", a2: "Oui. Nous choisissons des modèles adaptés aux enfants et aux animaux et les posons sur une base drainante : l'eau s'évacue et un simple rinçage au jet suffit pour le nettoyer.",
+  q3: "Chauffe-t-il en été ?", a3: "Comme toute surface au soleil, il chauffe. Nous recommandons des modèles qui accumulent moins la chaleur et un léger arrosage les jours les plus chauds.",
+  q4: "Combien ça coûte ?", a4: "Cela dépend de la surface, du modèle et de l'état du terrain. Envoyez-nous la surface approximative et une photo sur WhatsApp : nous vous donnons un prix ferme et sans engagement.",
+  q5: "Dans quelles zones intervenez-vous ?", a5: "Nous travaillons en Espagne. Écrivez-nous avec votre localité et nous vous confirmons disponibilités et dates.",
+  c_eyebrow: "Contact", c_title: "Parlez-nous de l'extérieur dont vous rêvez",
+  c_lead: "Écrivez-nous sur WhatsApp avec une photo de votre espace. En français, espagnol, anglais ou allemand.",
+  c_zone_l: "Zone", c_zone: "Interventions en Espagne",
+  l_name: "Nom", l_town: "Ville", l_svc: "Service", l_msg: "Votre projet",
+  ph_msg: "Surface approximative, ce que vous souhaitez changer…", send: "Envoyer sur WhatsApp",
+  need_name: "Indiquez votre nom pour préparer le message.",
+  foot2: "Jardinage · Gazon synthétique · Composite · Décoration",
+  tip_t: "On en parle ?", tip_d: "Écrivez-nous, nous répondons sur WhatsApp.", close: "Fermer",
+  wa_general: "Bonjour Jardiva, je souhaiterais des informations sur vos services.",
+  wa_quote: "Bonjour Jardiva, je souhaite un devis pour mon extérieur.",
+  wa_svc: (s) => `Bonjour Jardiva, je suis intéressé(e) par : ${s}.`,
+  wa_calc: (m, u) => `Bonjour Jardiva, je souhaite un devis pour du gazon synthétique.\n• Surface : ${m} m²\n• Usage : ${u}`,
+  wa_form: (n, t, s, m) => `Bonjour Jardiva, je m'appelle ${n}${t ? " (" + t + ")" : ""}.\nJe suis intéressé(e) par : ${s}.${m ? "\n" + m : ""}`
+},
+de: {
+  meta_title: "Jardiva · Kunstrasen und Gartengestaltung in Spanien",
+  meta_desc: "Jardiva, Studio für Außenbereiche: Kunstrasen, Gartenpflege, WPC-Terrassen und Außengestaltung. Angebot per WhatsApp.",
+  tagline_small: "STUDIO FÜR AUSSENBEREICHE",
+  nav_grass: "Kunstrasen", nav_services: "Leistungen", nav_work: "Projekte", nav_faq: "Fragen", nav_contact: "Kontakt",
+  cta_short: "Angebot",
+  hero_eyebrow: "Natur · Design · Komfort · Wohlbefinden",
+  hero_title: "Außenbereiche <em>zum Leben.</em>",
+  hero_lead: "Kunstrasen, Gartenpflege, WPC-Terrassen und Außengestaltung. Ein Team, das Ihren Garten plant, anlegt und pflegt – damit Sie ihn einfach genießen können.",
+  hero_alt: "Terrasse mit Pergola, Lounge-Sofa und Pool bei Sonnenuntergang",
+  cta_quote: "Angebot per WhatsApp anfragen", cta_calc: "Rasenfläche berechnen",
+  fact1: "Kostenloses, unverbindliches Angebot", fact2: "Schriftlicher Festpreis", fact3: "Sauber und pünktlich",
+  hero_quote: "„Mehr als Gärten – wir schaffen Räume zum Leben.“",
+  v1: "Natur", v2: "Design", v3: "Qualität", v4: "Wohlbefinden",
+  g_eyebrow: "Unsere Spezialität", g_title: "Kunstrasen, der <em>echt aussieht</em>",
+  g_lead: "Das ganze Jahr grün – ohne Gießen, ohne Mähen, ohne Matsch. Wir verlegen ihn auf einem verdichteten, wasserdurchlässigen Unterbau, damit er jahrelang perfekt bleibt.",
+  g_b1: "Spart Wasser: kein Gießen, auch im Sommer", g_b2: "Modelle geeignet für Kinder und Haustiere",
+  g_b3: "Drainage-Unterbau: kurz nach dem Regen wieder trocken", g_b4: "Für Gärten, Terrassen, Dachterrassen und Poolbereiche",
+  calc_title: "Ihr Angebot in 30 Sekunden", calc_sub: "Fläche und Nutzung angeben – die Nachricht öffnet sich fertig in WhatsApp.",
+  calc_m2: "Ungefähre Fläche", calc_use: "Wofür nutzen Sie ihn?",
+  use_family: "Familie & Kinder", use_pets: "Haustiere", use_pool: "Poolbereich", use_terrace: "Terrasse oder Dachterrasse", use_deco: "Dekorativ",
+  calc_cta: "Per WhatsApp senden", calc_note: "Wir antworten mit einem Vorschlag und kommen auf Wunsch zum Ausmessen vorbei.",
+  svc_eyebrow: "Unsere Leistungen", svc_title: "Ihr ganzer Außenbereich aus einer Hand",
+  svc_lead: "Wählen Sie eine Leistung oder kombinieren Sie mehrere. Wir antworten per WhatsApp mit einem klaren Angebot.",
+  s1_t: "Gartenpflege", s1_d: "Schnitt, Rasenmähen, Reinigung und Pflanzenpflege mit regelmäßigen Besuchen.",
+  s2_t: "Kunstrasen", s2_d: "Natürliche Optik, strapazierfähig und pflegeleicht. Ideal für Gärten, Terrassen und Pools.",
+  s3_t: "WPC-Terrassendielen", s3_d: "Elegante Außenböden, die nicht faulen und nicht splittern. Perfekt für Terrassen und Lounge-Bereiche.",
+  s4_t: "Außengestaltung", s4_d: "Pflanzen, Stein, Licht und Möbel im Einklang mit Ihrem Garten oder Ihrer Terrasse.",
+  ask: "Anfragen", star: "Spezialität",
+  ba_eyebrow: "Vorher und nachher", ba_title: "Vom ungenutzten Platz zum Lieblingsort",
+  ba_lead: "Schieben Sie den Regler: Kunstrasen, WPC-Dielen und Beleuchtung in einem Projekt.",
+  ba_1: "Kunstrasen auf Drainage-Unterbau", ba_2: "Weg aus WPC-Dielen", ba_3: "Stimmungsbeleuchtung und mediterrane Pflanzen",
+  before: "VORHER", after: "NACHHER", ba_aria: "Vorher und nachher vergleichen",
+  before_alt: "Garten vor der Umgestaltung", after_alt: "Garten nach der Umgestaltung",
+  work_eyebrow: "Projekte", work_title: "Außenbereiche, die schon genossen werden",
+  w1_t: "Beleuchteter Gartenweg", w1_d: "Platten, Pflanzen und Licht", w2_t: "Poolbereich", w2_d: "Poolrand und Garten",
+  w3_t: "Dielen und Kies", w3_d: "WPC mit Kiesgarten", w4_t: "Lounge-Ecke", w4_d: "Möbel, Pflanzen und Licht",
+  who_eyebrow: "Für wen wir arbeiten", who_title: "Privatkunden, Eigentümergemeinschaften und Betriebe",
+  who1_t: "Häuser, Villen und Fincas", who1_d: "Private Gärten zum Genießen – ohne jedes Wochenende darin zu arbeiten.",
+  who2_t: "Eigentümergemeinschaften", who2_d: "Gemeinschaftsflächen, Pools und Gärten mit regelmäßiger Pflege.",
+  who3_t: "Restaurants, Hotels und Betriebe", who3_d: "Terrassen und Außenbereiche, die Gäste anziehen und täglicher Nutzung standhalten.",
+  proc_eyebrow: "Ablauf", proc_title: "Einfach, von Anfang bis Ende",
+  p1_t: "Sie schreiben uns", p1_d: "Per WhatsApp, mit einem Foto Ihres Außenbereichs und der ungefähren Fläche.",
+  p2_t: "Besuch und Angebot", p2_d: "Wir messen aus und senden Ihnen ein Festpreisangebot – ohne Überraschungen.",
+  p3_t: "Einbau", p3_d: "Zum vereinbarten Termin, und wir hinterlassen alles sauber.",
+  p4_t: "Pflege", p4_d: "Ein optionaler Pflegeplan, damit Ihr Außenbereich perfekt bleibt.",
+  faq_eyebrow: "Häufige Fragen", faq_title: "Was uns am häufigsten gefragt wird", faq_lead: "Noch eine Frage? Schreiben Sie uns, wir antworten persönlich.",
+  q1: "Wie lange hält Kunstrasen?", a1: "Hochwertiger, fachgerecht verlegter Kunstrasen hält in der Regel 8 bis 15 Jahre, je nach Nutzung und Sonneneinstrahlung. Wir beraten Sie zum passenden Modell.",
+  q2: "Ist er für Kinder und Hunde geeignet?", a2: "Ja. Wir wählen kinder- und haustierfreundliche Modelle und verlegen sie auf einem Drainage-Unterbau: Wasser läuft ab, und ein kurzes Abspritzen mit dem Schlauch genügt zur Reinigung.",
+  q3: "Wird er im Sommer heiß?", a3: "Wie jede Oberfläche in der Sonne erwärmt er sich. Wir empfehlen Modelle, die weniger Hitze speichern, und an den heißesten Tagen kurz abzubrausen.",
+  q4: "Was kostet das?", a4: "Das hängt von Fläche, Modell und Untergrund ab. Senden Sie uns die ungefähre Fläche und ein Foto per WhatsApp, und Sie erhalten einen unverbindlichen Festpreis.",
+  q5: "In welchen Regionen arbeiten Sie?", a5: "Wir arbeiten in Spanien. Schreiben Sie uns Ihren Ort, und wir bestätigen Verfügbarkeit und Termine.",
+  c_eyebrow: "Kontakt", c_title: "Erzählen Sie uns von Ihrem Wunsch-Außenbereich",
+  c_lead: "Schreiben Sie uns per WhatsApp mit einem Foto Ihres Außenbereichs – gerne auf Deutsch, Englisch, Französisch oder Spanisch.",
+  c_zone_l: "Region", c_zone: "Einsatz in Spanien",
+  l_name: "Name", l_town: "Ort", l_svc: "Leistung", l_msg: "Ihr Projekt",
+  ph_msg: "Ungefähre Fläche, was Sie ändern möchten…", send: "Per WhatsApp senden",
+  need_name: "Geben Sie Ihren Namen ein, um die Nachricht vorzubereiten.",
+  foot2: "Gartenpflege · Kunstrasen · WPC · Gestaltung",
+  tip_t: "Sollen wir sprechen?", tip_d: "Schreiben Sie uns, wir antworten per WhatsApp.", close: "Schließen",
+  wa_general: "Hallo Jardiva, ich hätte gerne Informationen zu Ihren Leistungen.",
+  wa_quote: "Hallo Jardiva, ich möchte ein Angebot für meinen Außenbereich anfragen.",
+  wa_svc: (s) => `Hallo Jardiva, ich interessiere mich für: ${s}.`,
+  wa_calc: (m, u) => `Hallo Jardiva, ich möchte ein Angebot für Kunstrasen.\n• Fläche: ${m} m²\n• Nutzung: ${u}`,
+  wa_form: (n, t, s, m) => `Hallo Jardiva, mein Name ist ${n}${t ? " aus " + t : ""}.\nIch interessiere mich für: ${s}.${m ? "\n" + m : ""}`
+}
+};
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+const wa = (text) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+let lang = "es";
+
+// Idioma: 1) ?lang= en la URL  2) elección guardada  3) idiomas del dispositivo  4) español
+function detectLang() {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (LANGS.includes(q)) return q;
+  try { const s = localStorage.getItem("jardiva-lang"); if (LANGS.includes(s)) return s; } catch (e) {}
+  for (const l of (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "es"])) {
+    const c = String(l).slice(0, 2).toLowerCase();
+    if (LANGS.includes(c)) return c;
+  }
+  return "es";
+}
+
+function calcLink() {
+  const d = T[lang], m = $("#m2").value, use = document.querySelector('input[name="use"]:checked').value;
+  $("#calc-link").href = wa(d.wa_calc(m, d[use]));
+}
+
+function apply(l, remember) {
+  lang = LANGS.includes(l) ? l : "es";
+  const d = T[lang];
+  document.documentElement.lang = lang;
+  document.title = d.meta_title;
+  document.querySelector('meta[name="description"]').content = d.meta_desc;
+  $$("[data-i18n]").forEach(el => { const v = d[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+  $$("[data-i18n-html]").forEach(el => { el.innerHTML = d[el.dataset.i18nHtml]; });
+  $$("[data-i18n-alt]").forEach(el => { el.alt = d[el.dataset.i18nAlt]; });
+  $$("[data-i18n-ph]").forEach(el => { el.placeholder = d[el.dataset.i18nPh]; });
+  $$("[data-i18n-aria]").forEach(el => { el.setAttribute("aria-label", d[el.dataset.i18nAria]); });
+  $$(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  $$("[data-wa]").forEach(a => {
+    const k = a.dataset.wa;
+    a.href = wa(k === "general" ? d.wa_general : k === "quote" ? d.wa_quote : d.wa_svc(d[k + "_t"]));
+  });
+  calcLink();
+  if (remember) {
+    try { localStorage.setItem("jardiva-lang", lang); } catch (e) {}
+    const u = new URL(location.href); u.searchParams.set("lang", lang);
+    try { history.replaceState(null, "", u); } catch (e) {}
+  }
+}
+$$(".langs button").forEach(b => b.addEventListener("click", () => apply(b.dataset.lang, true)));
+
+// calculadora de césped
+const m2 = $("#m2");
+const syncM2 = () => {
+  $("#m2-out").value = m2.value;
+  m2.style.setProperty("--fill", ((m2.value - m2.min) / (m2.max - m2.min) * 100) + "%");
+  calcLink();
+};
+m2.addEventListener("input", syncM2);
+$$('input[name="use"]').forEach(r => r.addEventListener("change", calcLink));
+
+// antes / después
+const ba = $("#ba"), range = $("#ba-range");
+const setPos = () => ba.style.setProperty("--pos", range.value + "%");
+range.addEventListener("input", setPos);
+
+// formulario -> WhatsApp en un clic
+$("#lead").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const d = T[lang], name = $("#f-name").value.trim();
+  if (!name) { $("#err").hidden = false; $("#f-name").focus(); return; }
+  $("#err").hidden = true;
+  const sel = $("#f-svc");
+  const msg = d.wa_form(name, $("#f-town").value.trim(), sel.options[sel.selectedIndex].textContent, $("#f-msg").value.trim());
+  window.open(wa(msg), "_blank", "noopener");
+});
+
+// cabecera con sombra al hacer scroll
+const hdr = $("#top");
+addEventListener("scroll", () => hdr.classList.toggle("scrolled", scrollY > 10), { passive: true });
+
+// burbuja del WhatsApp flotante: aparece una vez a los 7 s
+const tip = $("#wa-tip");
+let tipSeen = false;
+try { tipSeen = sessionStorage.getItem("jardiva-tip") === "1"; } catch (e) {}
+if (!tipSeen) setTimeout(() => tip.classList.add("show"), 7000);
+$("#tip-x").addEventListener("click", () => { tip.classList.remove("show"); try { sessionStorage.setItem("jardiva-tip", "1"); } catch (e) {} });
+
+// aparición suave al hacer scroll
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((es) => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  $$(".rv").forEach(el => io.observe(el));
+} else { $$(".rv").forEach(el => el.classList.add("in")); }
+
+$("#yr").textContent = new Date().getFullYear();
+apply(detectLang(), false);
+syncM2(); setPos();
+</script>
+</body>
+</html>
