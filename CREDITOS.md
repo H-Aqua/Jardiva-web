@@ -4,6 +4,6 @@
 - `serv-composite.jpg`: Unsplash, https://unsplash.com/photos/gOvq4YqbtIU
 - `serv-mantenimiento.jpg`: Unsplash, https://unsplash.com/photos/JB-QHEehcwI
 - `serv-riego.jpg`: Unsplash, https://unsplash.com/photos/RjxqFCXpt2c
-- `hero.jpg`: provisional, de la propuesta inicial. Sustituir por una foto real.
+- `hero.jpg`: imagen de portada aportada por el cliente.
 
 Las fotos de Unsplash se usan bajo la Licencia Unsplash (uso comercial gratuito, sin atribución obligatoria).
