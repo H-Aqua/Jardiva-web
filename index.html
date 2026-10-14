@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Jardiva · Césped artificial y jardines en España</title>
-<meta name="description" content="Jardiva, estudio de exteriores: césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Presupuesto por WhatsApp.">
+<meta name="description" content="Jardiva, estudio de exteriores: césped artificial, mantenimiento de jardines, tarimas composite y sistemas de riego. Presupuesto por WhatsApp.">
 <meta name="theme-color" content="#2F633F">
 <meta property="og:title" content="Jardiva · Espacios exteriores para vivir">
-<meta property="og:description" content="Césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior.">
+<meta property="og:description" content="Césped artificial, mantenimiento de jardines, tarimas composite y sistemas de riego.">
 <meta property="og:image" content="img/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%232F633F'/%3E%3Cpath d='M22 24c0-8 5-12.5 13-13.5-.6 8-5.5 12.6-13 13.5z' fill='%2368B04D'/%3E%3Ctext x='32' y='50' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='27' fill='white'%3EJR%3C/text%3E%3C/svg%3E">
@@ -27,7 +27,7 @@
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Césped artificial"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mantenimiento de jardines"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tarimas composite"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Decoración de exteriores"}}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sistemas de riego"}}
   ]
 }
 </script>
@@ -170,24 +170,33 @@ input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 
 
 /* antes / después */
 .ba-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: center; }
-.ba { position: relative; aspect-ratio: 4 / 3; border-radius: 28px; overflow: hidden; user-select: none; background: var(--piedra); touch-action: pan-y; }
-.ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.ba .after { clip-path: inset(0 0 0 var(--pos, 50%)); }
-.ba .handle { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; background: #fff; transform: translateX(-1px); pointer-events: none; }
-.ba .knob { position: absolute; top: 50%; left: 50%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; background: #fff; display: grid; place-items: center; color: var(--bosque); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-.ba .knob svg { width: 24px; height: 24px; }
-.ba .tag { position: absolute; bottom: 18px; font: 700 11px/1 var(--head); letter-spacing: .18em; padding: 9px 12px; border-radius: 99px; color: #fff; pointer-events: none; }
-.ba .tag.l { left: 18px; background: rgba(43,43,43,.82); } .ba .tag.r { right: 18px; background: var(--bosque); }
-.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-
-/* proyectos */
 .work { background: var(--card); }
-.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.gallery figure { margin: 0; position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 3 / 4; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
-.gallery figure:hover img { transform: scale(1.05); }
-.gallery figcaption { position: absolute; inset: auto 0 0; padding: 48px 18px 18px; color: #fff; background: linear-gradient(transparent, rgba(14,34,21,.85)); font-size: 13.5px; }
-.gallery figcaption b { display: block; font: 700 17px/1.2 var(--head); letter-spacing: -.01em; margin-bottom: 2px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pair figure, .wide { margin: 0; position: relative; border-radius: var(--r); overflow: hidden; background: var(--piedra); }
+.pair figure { aspect-ratio: 3 / 4; }
+.pair img, .wide img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.pair figure:hover img, .wide:hover img { transform: scale(1.04); }
+.pair .tag { position: absolute; top: 14px; left: 14px; font: 700 11px/1 var(--head); letter-spacing: .18em; padding: 9px 12px; border-radius: 99px; color: #fff; }
+.pair .tag.l { background: rgba(43,43,43,.82); } .pair .tag.r { background: var(--bosque); }
+.wide { margin-top: 20px; aspect-ratio: 21 / 9; }
+.wide figcaption { position: absolute; inset: auto 0 0; padding: 48px 22px 18px; color: #fff; background: linear-gradient(transparent, rgba(14,34,21,.8)); font: 700 17px/1.2 var(--head); }
+
+/* precios */
+.price { flex: 0 !important; font: 700 15px/1.2 var(--head) !important; color: var(--natural-ink) !important; padding-top: 4px; }
+.price small { font: 500 12px/1 var(--body); color: var(--muted); margin-left: 4px; }
+.price-note { margin: 22px 0 0; font-size: 13.5px; color: var(--muted); max-width: 60em; }
+.est { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.16); padding: 18px 0 22px; margin-top: -6px; }
+.est span { font: 600 11px/1.3 var(--head); letter-spacing: .16em; text-transform: uppercase; color: var(--arena); }
+.est b { font: 800 24px/1 var(--head); letter-spacing: -.02em; }
+
+/* cotiza */
+.quote-band { margin-top: 48px; background: var(--bosque); color: #fff; border-radius: 28px; padding: 44px 48px; display: flex; align-items: center; justify-content: space-between; gap: 28px 48px; flex-wrap: wrap; position: relative; overflow: hidden; }
+.quote-band::after { content: ""; position: absolute; width: 300px; height: 300px; right: -80px; bottom: -160px; border-radius: 50%; background: radial-gradient(circle, rgba(104,176,77,.4), transparent 70%); pointer-events: none; }
+.quote-band > div { max-width: 640px; position: relative; }
+.quote-band .eyebrow { color: var(--arena); }
+.quote-band h2 { color: #fff; font-size: clamp(28px, 3.4vw, 40px); }
+.quote-band p:last-child { margin: 12px 0 0; color: rgba(255,255,255,.78); }
+.quote-band .btn { position: relative; z-index: 1; }
 
 /* para quién */
 .who { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
@@ -270,7 +279,6 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
 @media (max-width: 1080px) {
   nav.main { display: none; }
   .svc-grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grass-grid, .ba-grid, .faq-grid, .c-grid { grid-template-columns: 1fr; gap: 44px; }
   .hero-quote { display: none; }
 }
@@ -295,11 +303,12 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
   .values .ic { width: 38px; height: 38px; }
   .calc { padding: 28px 22px; border-radius: 22px; }
   .svc-grid, .steps, .f2 { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 74%; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: -16px; padding-inline: 16px; scrollbar-width: none; }
-  .gallery figure { scroll-snap-align: start; }
+  .wide { aspect-ratio: 4 / 3; }
+  .quote-band { padding: 30px 22px; border-radius: 22px; }
+  .quote-band .btn { flex: 1 1 100%; }
+  .pair { gap: 10px; }
   .who { grid-template-columns: 1fr; }
   .who div, .who div + div { padding: 26px 0; border-left: 0; border-bottom: 1px solid var(--line); }
-  .ba { aspect-ratio: 4 / 3.6; border-radius: 22px; }
   form { padding: 22px; border-radius: 22px; }
   footer { padding-bottom: 76px; }
   .wa-float { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
@@ -328,7 +337,7 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
   <symbol id="i-deck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15 9 7h12l-6 8z"/><path d="M6 11h12M4.5 13h12"/><path d="M3 15v3h12v-3M21 7v3l-6 8"/></g></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-lr" viewBox="0 0 24 24"><path d="M9 6 3 12l6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></g></symbol>
 </svg>
 
 <header id="top">
@@ -362,7 +371,7 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="hero_eyebrow">Naturaleza · Diseño · Confort · Bienestar</p>
           <h1 id="h1" data-i18n-html="hero_title">Espacios exteriores <em>para vivir.</em></h1>
-          <p class="lead" data-i18n="hero_lead">Césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Un solo equipo que diseña, instala y cuida tu jardín para que tú solo tengas que disfrutarlo.</p>
+          <p class="lead" data-i18n="hero_lead">Césped artificial, mantenimiento de jardines, tarimas composite y sistemas de riego. Un solo equipo que diseña, instala y cuida tu jardín para que tú solo tengas que disfrutarlo.</p>
           <div class="cta-row">
             <a class="btn btn-primary" data-wa="quote" href="https://wa.me/34631991523" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="cta_quote">Pide presupuesto por WhatsApp</span></a>
             <a class="btn btn-ghost" href="#cesped"><span data-i18n="cta_calc">Calcula tu césped</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -412,6 +421,7 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
           <label><input type="radio" name="use" value="use_terrace"><span data-i18n="use_terrace">Terraza o ático</span></label>
           <label><input type="radio" name="use" value="use_deco"><span data-i18n="use_deco">Decorativo</span></label>
         </div>
+        <div class="est"><span data-i18n="calc_est">Precio orientativo instalado</span><b id="est-out">1.250 – 2.250 €</b></div>
         <a class="btn btn-primary" id="calc-link" href="https://wa.me/34631991523" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="calc_cta">Enviar por WhatsApp</span></a>
         <p class="note" data-i18n="calc_note">Te respondemos con una propuesta y, si quieres, quedamos para medir.</p>
       </div>
@@ -426,49 +436,34 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
         <p class="lead" data-i18n="svc_lead">Elige un servicio o combínalos. Te respondemos por WhatsApp con una propuesta clara.</p>
       </div>
       <div class="svc-grid">
-        <article class="svc rv"><div class="ph"><img src="img/serv1.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span></div><div class="svc-body"><h3 data-i18n="s1_t">Mantenimiento de jardines</h3><p data-i18n="s1_d">Poda, corte de césped, limpieza y cuidado de plantas con visitas periódicas.</p><a data-wa="s1" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
-        <article class="svc star rv"><div class="ph"><img src="img/serv2.jpg" alt="" loading="lazy"><span class="tag" data-i18n="star">Especialidad</span><span class="badge"><svg aria-hidden="true"><use href="#i-grass"/></svg></span></div><div class="svc-body"><h3 data-i18n="s2_t">Césped artificial</h3><p data-i18n="s2_d">Instalación de aspecto natural, resistente y de bajo mantenimiento. Ideal para jardines, terrazas y piscinas.</p><a data-wa="s2" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
-        <article class="svc rv"><div class="ph"><img src="img/serv3.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-deck"/></svg></span></div><div class="svc-body"><h3 data-i18n="s3_t">Tarimas composite</h3><p data-i18n="s3_d">Suelos exteriores elegantes que no se pudren ni astillan. Perfectos para terrazas y zonas de descanso.</p><a data-wa="s3" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
-        <article class="svc rv"><div class="ph"><img src="img/serv4.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-sprout"/></svg></span></div><div class="svc-body"><h3 data-i18n="s4_t">Decoración de exteriores</h3><p data-i18n="s4_d">Plantas, piedra, iluminación y mobiliario en armonía con tu jardín o terraza.</p><a data-wa="s4" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc rv"><div class="ph"><img src="img/serv-mantenimiento.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span></div><div class="svc-body"><h3 data-i18n="s1_t">Mantenimiento de jardines</h3><p data-i18n="s1_d">Poda, corte de césped, limpieza y cuidado de plantas con visitas periódicas.</p><p class="price" data-price="s1"></p><a data-wa="s1" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc star rv"><div class="ph"><img src="img/serv-cesped.jpg" alt="" loading="lazy"><span class="tag" data-i18n="star">Especialidad</span><span class="badge"><svg aria-hidden="true"><use href="#i-grass"/></svg></span></div><div class="svc-body"><h3 data-i18n="s2_t">Césped artificial</h3><p data-i18n="s2_d">Instalación de aspecto natural, resistente y de bajo mantenimiento. Ideal para jardines, terrazas y piscinas.</p><p class="price" data-price="s2"></p><a data-wa="s2" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc rv"><div class="ph"><img src="img/serv-composite.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-deck"/></svg></span></div><div class="svc-body"><h3 data-i18n="s3_t">Tarimas composite</h3><p data-i18n="s3_d">Suelos exteriores elegantes que no se pudren ni astillan. Perfectos para terrazas y zonas de descanso.</p><p class="price" data-price="s3"></p><a data-wa="s3" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        <article class="svc rv"><div class="ph"><img src="img/serv-riego.jpg" alt="" loading="lazy"><span class="badge"><svg aria-hidden="true"><use href="#i-drop"/></svg></span></div><div class="svc-body"><h3 data-i18n="s4_t">Sistemas de riego</h3><p data-i18n="s4_d">Riego automático por goteo o aspersión, con programador, para ahorrar agua y tiempo.</p><p class="price" data-price="s4"></p><a data-wa="s4" href="https://wa.me/34631991523" target="_blank" rel="noopener"><span data-i18n="ask">Consultar</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
       </div>
+      <p class="price-note rv" data-i18n="price_note">Precios orientativos de mercado en España. El precio final depende de los metros, los materiales y el estado del terreno, y te lo damos cerrado tras ver tu espacio.</p>
     </div>
   </section>
 
-  <section id="antes-despues" aria-labelledby="h-ba">
-    <div class="wrap ba-grid">
-      <div class="rv">
-        <p class="eyebrow" data-i18n="ba_eyebrow">Antes y después</p>
-        <h2 id="h-ba" data-i18n="ba_title">De un espacio desaprovechado a un lugar para vivir</h2>
-        <p class="lead" data-i18n="ba_lead">Desliza para ver la transformación: césped artificial, tarima composite e iluminación en un mismo proyecto.</p>
-        <ul class="ticks">
-          <li data-i18n="ba_1">Césped artificial sobre base drenante</li>
-          <li data-i18n="ba_2">Pasarela de tarima composite</li>
-          <li data-i18n="ba_3">Iluminación ambiental y plantas mediterráneas</li>
-        </ul>
-      </div>
-      <div class="ba rv" id="ba">
-        <img src="img/antes.jpg" alt="Jardín antes de la reforma" data-i18n-alt="before_alt" loading="lazy">
-        <img class="after" src="img/despues.jpg" alt="Jardín después de la reforma" data-i18n-alt="after_alt" loading="lazy">
-        <span class="tag l" data-i18n="before">ANTES</span>
-        <span class="tag r" data-i18n="after">DESPUÉS</span>
-        <div class="handle"><span class="knob"><svg aria-hidden="true"><use href="#i-lr"/></svg></span></div>
-        <input id="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" data-i18n-aria="ba_aria">
-      </div>
-    </div>
-  </section>
-
-  <section class="work" id="proyectos" aria-labelledby="h-work">
+  <section class="work" id="proyectos" aria-labelledby="h-ba">
     <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow" data-i18n="work_eyebrow">Proyectos</p>
-        <h2 id="h-work" data-i18n="work_title">Exteriores que ya se disfrutan</h2>
+      <div class="ba-grid">
+        <div class="rv">
+          <p class="eyebrow" data-i18n="ba_eyebrow">Antes y después</p>
+          <h2 id="h-ba" data-i18n="ba_title">Un proyecto real de Jardiva</h2>
+          <p class="lead" data-i18n="ba_lead">Así quedó este jardín: preparamos el terreno, colocamos bordillo metálico e instalamos césped artificial.</p>
+          <ul class="ticks">
+            <li data-i18n="ba_1">Retirada de grava y nivelado del terreno</li>
+            <li data-i18n="ba_2">Bordillo metálico para un acabado limpio</li>
+            <li data-i18n="ba_3">Césped artificial de aspecto natural</li>
+          </ul>
+        </div>
+        <div class="pair rv">
+          <figure><img src="img/cesped-antes.jpg" alt="Jardín antes de instalar el césped" data-i18n-alt="before_alt" loading="lazy"><span class="tag l" data-i18n="before">ANTES</span></figure>
+          <figure><img src="img/cesped-despues.jpg" alt="Jardín después de instalar el césped" data-i18n-alt="after_alt" loading="lazy"><span class="tag r" data-i18n="after">DESPUÉS</span></figure>
+        </div>
       </div>
-      <div class="gallery">
-        <figure class="rv"><img src="img/foto1.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w1_t">Sendero iluminado</b><span data-i18n="w1_d">Losas, plantas y luz</span></figcaption></figure>
-        <figure class="rv"><img src="img/foto2.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w2_t">Zona de piscina</b><span data-i18n="w2_d">Borde de piscina y jardín</span></figcaption></figure>
-        <figure class="rv"><img src="img/foto3.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w3_t">Tarima y grava</b><span data-i18n="w3_d">Composite con jardín seco</span></figcaption></figure>
-        <figure class="rv"><img src="img/foto4.jpg" alt="" loading="lazy"><figcaption><b data-i18n="w4_t">Rincón chill-out</b><span data-i18n="w4_d">Mobiliario, plantas y luz</span></figcaption></figure>
-      </div>
+      <figure class="wide rv"><img src="img/cesped-chalet.jpg" alt="Jardín de chalet con césped artificial" data-i18n-alt="chalet_alt" loading="lazy"><figcaption data-i18n="chalet_cap">Jardín de chalet con césped artificial</figcaption></figure>
     </div>
   </section>
 
@@ -498,6 +493,14 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
         <li class="rv"><b data-i18n="p3_t">Instalación</b><span data-i18n="p3_d">En la fecha acordada, y dejamos todo limpio.</span></li>
         <li class="rv"><b data-i18n="p4_t">Mantenimiento</b><span data-i18n="p4_d">Un plan opcional para que tu exterior siga perfecto.</span></li>
       </ol>
+      <div class="quote-band rv">
+        <div>
+          <p class="eyebrow" data-i18n="q_eyebrow">Cotiza con nosotros</p>
+          <h2 data-i18n="q_title">¿Listo para transformar tu exterior?</h2>
+          <p data-i18n="q_lead">Envíanos una foto y los metros por WhatsApp y te respondemos con un presupuesto claro y sin compromiso.</p>
+        </div>
+        <a class="btn btn-primary" data-wa="quote" href="https://wa.me/34631991523" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="q_cta">Cotizar por WhatsApp</span></a>
+      </div>
     </div>
   </section>
 
@@ -539,7 +542,7 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
             <option value="s2" data-i18n="s2_t">Césped artificial</option>
             <option value="s1" data-i18n="s1_t">Mantenimiento de jardines</option>
             <option value="s3" data-i18n="s3_t">Tarimas composite</option>
-            <option value="s4" data-i18n="s4_t">Decoración de exteriores</option>
+            <option value="s4" data-i18n="s4_t">Sistemas de riego</option>
           </select>
         </label>
         <label for="f-msg"><span data-i18n="l_msg">Tu proyecto</span><textarea id="f-msg" data-i18n-ph="ph_msg" placeholder="Metros aproximados, qué te gustaría cambiar…"></textarea></label>
@@ -556,7 +559,7 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
       <svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>
       <span class="word"><b>Jardiva</b><small data-i18n="tagline_small">ESTUDIO DE EXTERIORES</small></span>
     </a>
-    <span data-i18n="foot2">Jardinería · Césped artificial · Composite · Decoración</span>
+    <span data-i18n="foot2">Césped artificial · Composite · Mantenimiento · Riego</span>
     <span>© <span id="yr">2026</span> Jardiva</span>
   </div>
 </footer>
@@ -569,18 +572,26 @@ footer .brand .word small { color: rgba(238,241,234,.55); }
 <script>
 document.documentElement.classList.add("js");
 const WA_NUMBER = "34631991523";
+// Precios orientativos (medias de mercado en España). Ajustar con las tarifas reales de Jardiva.
+const PRICES = {
+  s1: { min: 18, max: 28, unit: "u_h" },   // mantenimiento, €/hora
+  s2: { min: 25, max: 45, unit: "u_m2" },  // césped artificial instalado
+  s3: { min: 50, max: 90, unit: "u_m2" },  // tarima composite instalada
+  s4: { min: 5,  max: 15, unit: "u_m2" }   // riego automático
+};
+const LOCALE = { es: "es-ES", en: "en-GB", fr: "fr-FR", de: "de-DE" };
 const LANGS = ["es", "en", "fr", "de"];
 
 const T = {
 es: {
   meta_title: "Jardiva · Césped artificial y jardines en España",
-  meta_desc: "Jardiva, estudio de exteriores: césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Presupuesto por WhatsApp.",
+  meta_desc: "Jardiva, estudio de exteriores: césped artificial, mantenimiento de jardines, tarimas composite y sistemas de riego. Presupuesto por WhatsApp.",
   tagline_small: "ESTUDIO DE EXTERIORES",
   nav_grass: "Césped artificial", nav_services: "Servicios", nav_work: "Proyectos", nav_faq: "Preguntas", nav_contact: "Contacto",
   cta_short: "Presupuesto",
   hero_eyebrow: "Naturaleza · Diseño · Confort · Bienestar",
   hero_title: "Espacios exteriores <em>para vivir.</em>",
-  hero_lead: "Césped artificial, mantenimiento de jardines, tarimas composite y decoración exterior. Un solo equipo que diseña, instala y cuida tu jardín para que tú solo tengas que disfrutarlo.",
+  hero_lead: "Césped artificial, mantenimiento de jardines, tarimas composite y sistemas de riego. Un solo equipo que diseña, instala y cuida tu jardín para que tú solo tengas que disfrutarlo.",
   hero_alt: "Terraza con pérgola, sofá exterior y piscina al atardecer",
   cta_quote: "Pide presupuesto por WhatsApp", cta_calc: "Calcula tu césped",
   fact1: "Presupuesto sin compromiso", fact2: "Precio cerrado por escrito", fact3: "Trabajo limpio y puntual",
@@ -599,16 +610,17 @@ es: {
   s1_t: "Mantenimiento de jardines", s1_d: "Poda, corte de césped, limpieza y cuidado de plantas con visitas periódicas.",
   s2_t: "Césped artificial", s2_d: "Instalación de aspecto natural, resistente y de bajo mantenimiento. Ideal para jardines, terrazas y piscinas.",
   s3_t: "Tarimas composite", s3_d: "Suelos exteriores elegantes que no se pudren ni astillan. Perfectos para terrazas y zonas de descanso.",
-  s4_t: "Decoración de exteriores", s4_d: "Plantas, piedra, iluminación y mobiliario en armonía con tu jardín o terraza.",
+  s4_t: "Sistemas de riego", s4_d: "Riego automático por goteo o aspersión, con programador, para ahorrar agua y tiempo.",
+  approx: "Aprox.", u_m2: "m²", u_h: "hora", calc_est: "Precio orientativo instalado",
+  price_note: "Precios orientativos de mercado en España. El precio final depende de los metros, los materiales y el estado del terreno, y te lo damos cerrado tras ver tu espacio.",
+  q_eyebrow: "Cotiza con nosotros", q_title: "¿Listo para transformar tu exterior?", q_lead: "Envíanos una foto y los metros por WhatsApp y te respondemos con un presupuesto claro y sin compromiso.", q_cta: "Cotizar por WhatsApp",
   ask: "Consultar", star: "Especialidad",
-  ba_eyebrow: "Antes y después", ba_title: "De un espacio desaprovechado a un lugar para vivir",
-  ba_lead: "Desliza para ver la transformación: césped artificial, tarima composite e iluminación en un mismo proyecto.",
-  ba_1: "Césped artificial sobre base drenante", ba_2: "Pasarela de tarima composite", ba_3: "Iluminación ambiental y plantas mediterráneas",
-  before: "ANTES", after: "DESPUÉS", ba_aria: "Comparar antes y después",
-  before_alt: "Jardín antes de la reforma", after_alt: "Jardín después de la reforma",
-  work_eyebrow: "Proyectos", work_title: "Exteriores que ya se disfrutan",
-  w1_t: "Sendero iluminado", w1_d: "Losas, plantas y luz", w2_t: "Zona de piscina", w2_d: "Borde de piscina y jardín",
-  w3_t: "Tarima y grava", w3_d: "Composite con jardín seco", w4_t: "Rincón chill-out", w4_d: "Mobiliario, plantas y luz",
+  ba_eyebrow: "Antes y después", ba_title: "Un proyecto real de Jardiva",
+  ba_lead: "Así quedó este jardín: preparamos el terreno, colocamos bordillo metálico e instalamos césped artificial.",
+  ba_1: "Retirada de grava y nivelado del terreno", ba_2: "Bordillo metálico para un acabado limpio", ba_3: "Césped artificial de aspecto natural",
+  before: "ANTES", after: "DESPUÉS",
+  before_alt: "Jardín antes de instalar el césped", after_alt: "Jardín después de instalar el césped",
+  chalet_alt: "Jardín de chalet con césped artificial", chalet_cap: "Jardín de chalet con césped artificial",
   who_eyebrow: "Para quién trabajamos", who_title: "Particulares, comunidades y negocios",
   who1_t: "Casas, chalets y fincas", who1_d: "Jardines privados para disfrutar sin dedicarles los fines de semana.",
   who2_t: "Comunidades de vecinos", who2_d: "Zonas comunes, piscinas y jardines con mantenimiento periódico.",
@@ -622,7 +634,7 @@ es: {
   q1: "¿Cuánto dura el césped artificial?", a1: "Un césped de calidad bien instalado suele durar entre 8 y 15 años, según el uso y las horas de sol. Te asesoramos sobre el modelo adecuado para tu espacio.",
   q2: "¿Es apto para niños y perros?", a2: "Sí. Elegimos modelos aptos para niños y mascotas y los instalamos sobre base drenante: el agua se evacúa y se limpia fácilmente con un enjuague de manguera.",
   q3: "¿Se calienta en verano?", a3: "Como cualquier superficie al sol, se calienta. Te recomendamos modelos que acumulan menos calor y un riego breve los días más calurosos.",
-  q4: "¿Cuánto cuesta?", a4: "Depende de los metros, el modelo y el estado del terreno. Envíanos los metros aproximados y una foto por WhatsApp y te damos un precio cerrado y sin compromiso.",
+  q4: "¿Cuánto cuesta?", a4: "Como referencia, el césped artificial instalado suele costar entre 25 y 45 €/m², según los metros, el modelo y el estado del terreno. Envíanos los metros aproximados y una foto por WhatsApp y te damos un precio cerrado y sin compromiso.",
   q5: "¿En qué zonas trabajáis?", a5: "Trabajamos en España. Escríbenos con tu localidad y te confirmamos disponibilidad y fechas.",
   c_eyebrow: "Contacto", c_title: "Cuéntanos qué exterior imaginas",
   c_lead: "Escríbenos por WhatsApp con una foto de tu espacio. Puedes hacerlo en español, inglés, francés o alemán.",
@@ -630,7 +642,7 @@ es: {
   l_name: "Nombre", l_town: "Localidad", l_svc: "Servicio", l_msg: "Tu proyecto",
   ph_msg: "Metros aproximados, qué te gustaría cambiar…", send: "Enviar por WhatsApp",
   need_name: "Escribe tu nombre para preparar el mensaje.",
-  foot2: "Jardinería · Césped artificial · Composite · Decoración",
+  foot2: "Césped artificial · Composite · Mantenimiento · Riego",
   tip_t: "¿Hablamos?", tip_d: "Escríbenos y te respondemos por WhatsApp.", close: "Cerrar",
   wa_general: "Hola Jardiva, me gustaría información sobre vuestros servicios.",
   wa_quote: "Hola Jardiva, quiero pedir un presupuesto para mi exterior.",
@@ -640,13 +652,13 @@ es: {
 },
 en: {
   meta_title: "Jardiva · Artificial grass & garden design in Spain",
-  meta_desc: "Jardiva, outdoor design studio: artificial grass, garden maintenance, composite decking and outdoor styling. Get a quote on WhatsApp.",
+  meta_desc: "Jardiva, outdoor design studio: artificial grass, garden maintenance, composite decking and irrigation systems. Get a quote on WhatsApp.",
   tagline_small: "OUTDOOR DESIGN STUDIO",
   nav_grass: "Artificial grass", nav_services: "Services", nav_work: "Projects", nav_faq: "FAQ", nav_contact: "Contact",
   cta_short: "Get a quote",
   hero_eyebrow: "Nature · Design · Comfort · Wellbeing",
   hero_title: "Outdoor spaces <em>made for living.</em>",
-  hero_lead: "Artificial grass, garden maintenance, composite decking and outdoor styling. One team that designs, installs and looks after your garden, so all you have to do is enjoy it.",
+  hero_lead: "Artificial grass, garden maintenance, composite decking and irrigation systems. One team that designs, installs and looks after your garden, so all you have to do is enjoy it.",
   hero_alt: "Terrace with pergola, outdoor sofa and pool at sunset",
   cta_quote: "Get a quote on WhatsApp", cta_calc: "Size up your lawn",
   fact1: "Free, no-obligation quote", fact2: "Fixed price in writing", fact3: "Tidy, punctual work",
@@ -665,16 +677,17 @@ en: {
   s1_t: "Garden maintenance", s1_d: "Pruning, mowing, clearing and plant care with regular visits.",
   s2_t: "Artificial grass", s2_d: "Natural-looking, hard-wearing and low-maintenance. Ideal for gardens, terraces and pools.",
   s3_t: "Composite decking", s3_d: "Elegant outdoor flooring that won't rot or splinter. Perfect for terraces and lounge areas.",
-  s4_t: "Outdoor styling", s4_d: "Plants, stone, lighting and furniture in harmony with your garden or terrace.",
+  s4_t: "Irrigation systems", s4_d: "Automatic drip or sprinkler irrigation with a timer, to save water and time.",
+  approx: "Approx.", u_m2: "m²", u_h: "hour", calc_est: "Estimated installed price",
+  price_note: "Guide prices based on the Spanish market. The final price depends on the area, materials and ground condition — we give you a fixed price once we've seen your space.",
+  q_eyebrow: "Get a quote", q_title: "Ready to transform your outdoor space?", q_lead: "Send us a photo and the size on WhatsApp and we'll reply with a clear, no-obligation quote.", q_cta: "Get a quote on WhatsApp",
   ask: "Enquire", star: "Speciality",
-  ba_eyebrow: "Before and after", ba_title: "From wasted space to a place for living",
-  ba_lead: "Slide to see the transformation: artificial grass, composite decking and lighting in a single project.",
-  ba_1: "Artificial grass on a free-draining base", ba_2: "Composite decking walkway", ba_3: "Ambient lighting and Mediterranean planting",
-  before: "BEFORE", after: "AFTER", ba_aria: "Compare before and after",
-  before_alt: "Garden before the makeover", after_alt: "Garden after the makeover",
-  work_eyebrow: "Projects", work_title: "Outdoor spaces already being enjoyed",
-  w1_t: "Lit garden path", w1_d: "Paving, plants and light", w2_t: "Pool area", w2_d: "Pool edge and garden",
-  w3_t: "Decking and gravel", w3_d: "Composite with a dry garden", w4_t: "Chill-out corner", w4_d: "Furniture, plants and light",
+  ba_eyebrow: "Before and after", ba_title: "A real Jardiva project",
+  ba_lead: "Here's how this garden turned out: we prepared the ground, fitted metal edging and laid artificial grass.",
+  ba_1: "Gravel removal and ground levelling", ba_2: "Metal edging for a clean finish", ba_3: "Natural-looking artificial grass",
+  before: "BEFORE", after: "AFTER",
+  before_alt: "Garden before the artificial grass", after_alt: "Garden after the artificial grass",
+  chalet_alt: "Villa garden with artificial grass", chalet_cap: "Villa garden with artificial grass",
   who_eyebrow: "Who we work with", who_title: "Homeowners, communities and businesses",
   who1_t: "Houses, villas and estates", who1_d: "Private gardens to enjoy without giving up your weekends.",
   who2_t: "Residents' communities", who2_d: "Shared areas, pools and gardens with regular maintenance.",
@@ -688,7 +701,7 @@ en: {
   q1: "How long does artificial grass last?", a1: "Quality grass, properly installed, usually lasts 8 to 15 years depending on use and sun exposure. We'll advise you on the right product for your space.",
   q2: "Is it safe for children and dogs?", a2: "Yes. We choose child- and pet-friendly products and lay them on a free-draining base, so water drains away and a quick rinse with the hose keeps it clean.",
   q3: "Does it get hot in summer?", a3: "Like any surface in the sun, it warms up. We recommend products that retain less heat and a quick spray of water on the hottest days.",
-  q4: "How much does it cost?", a4: "It depends on the area, the product and the state of the ground. Send us the rough size and a photo on WhatsApp and we'll give you a fixed, no-obligation price.",
+  q4: "How much does it cost?", a4: "As a guide, installed artificial grass usually costs €25–45/m², depending on the area, the product and the state of the ground. Send us the rough size and a photo on WhatsApp and we'll give you a fixed, no-obligation price.",
   q5: "Which areas do you cover?", a5: "We work in Spain. Message us with your town and we'll confirm availability and dates.",
   c_eyebrow: "Contact", c_title: "Tell us about the outdoor space you have in mind",
   c_lead: "Message us on WhatsApp with a photo of your space. You can write in English, Spanish, French or German.",
@@ -696,7 +709,7 @@ en: {
   l_name: "Name", l_town: "Town", l_svc: "Service", l_msg: "Your project",
   ph_msg: "Approximate size, what you'd like to change…", send: "Send on WhatsApp",
   need_name: "Add your name to prepare the message.",
-  foot2: "Gardening · Artificial grass · Composite · Styling",
+  foot2: "Artificial grass · Composite · Maintenance · Irrigation",
   tip_t: "Shall we talk?", tip_d: "Message us and we'll reply on WhatsApp.", close: "Close",
   wa_general: "Hello Jardiva, I'd like some information about your services.",
   wa_quote: "Hello Jardiva, I'd like a quote for my outdoor space.",
@@ -706,13 +719,13 @@ en: {
 },
 fr: {
   meta_title: "Jardiva · Gazon synthétique et jardins en Espagne",
-  meta_desc: "Jardiva, studio d'aménagement extérieur : gazon synthétique, entretien de jardins, terrasses en composite et décoration extérieure. Devis sur WhatsApp.",
+  meta_desc: "Jardiva, studio d'aménagement extérieur : gazon synthétique, entretien de jardins, terrasses en composite et systèmes d'arrosage. Devis sur WhatsApp.",
   tagline_small: "STUDIO D'EXTÉRIEURS",
   nav_grass: "Gazon synthétique", nav_services: "Services", nav_work: "Réalisations", nav_faq: "Questions", nav_contact: "Contact",
   cta_short: "Devis",
   hero_eyebrow: "Nature · Design · Confort · Bien-être",
   hero_title: "Des espaces extérieurs <em>pour vivre.</em>",
-  hero_lead: "Gazon synthétique, entretien de jardins, terrasses en composite et décoration extérieure. Une seule équipe qui conçoit, installe et entretient votre jardin, pour que vous n'ayez plus qu'à en profiter.",
+  hero_lead: "Gazon synthétique, entretien de jardins, terrasses en composite et systèmes d'arrosage. Une seule équipe qui conçoit, installe et entretient votre jardin, pour que vous n'ayez plus qu'à en profiter.",
   hero_alt: "Terrasse avec pergola, canapé d'extérieur et piscine au coucher du soleil",
   cta_quote: "Demander un devis sur WhatsApp", cta_calc: "Estimer mon gazon",
   fact1: "Devis gratuit et sans engagement", fact2: "Prix ferme par écrit", fact3: "Chantier propre et ponctuel",
@@ -731,16 +744,17 @@ fr: {
   s1_t: "Entretien de jardins", s1_d: "Taille, tonte, nettoyage et soin des plantes avec des visites régulières.",
   s2_t: "Gazon synthétique", s2_d: "Aspect naturel, résistant et peu d'entretien. Idéal pour jardins, terrasses et piscines.",
   s3_t: "Terrasses en composite", s3_d: "Des sols extérieurs élégants qui ne pourrissent pas et ne s'écaillent pas. Parfaits pour terrasses et coins détente.",
-  s4_t: "Décoration extérieure", s4_d: "Plantes, pierre, éclairage et mobilier en harmonie avec votre jardin ou votre terrasse.",
+  s4_t: "Systèmes d'arrosage", s4_d: "Arrosage automatique goutte-à-goutte ou par aspersion, avec programmateur, pour économiser eau et temps.",
+  approx: "Env.", u_m2: "m²", u_h: "heure", calc_est: "Prix indicatif posé",
+  price_note: "Prix indicatifs du marché en Espagne. Le prix final dépend de la surface, des matériaux et de l'état du terrain : nous vous donnons un prix ferme après avoir vu votre espace.",
+  q_eyebrow: "Demandez un devis", q_title: "Prêt à transformer votre extérieur ?", q_lead: "Envoyez-nous une photo et la surface sur WhatsApp : nous vous répondons avec un devis clair et sans engagement.", q_cta: "Devis sur WhatsApp",
   ask: "Se renseigner", star: "Spécialité",
-  ba_eyebrow: "Avant / après", ba_title: "D'un espace délaissé à un lieu de vie",
-  ba_lead: "Faites glisser pour voir la transformation : gazon synthétique, terrasse en composite et éclairage dans un même projet.",
-  ba_1: "Gazon synthétique sur base drainante", ba_2: "Allée en lames composites", ba_3: "Éclairage d'ambiance et plantes méditerranéennes",
-  before: "AVANT", after: "APRÈS", ba_aria: "Comparer avant et après",
-  before_alt: "Jardin avant les travaux", after_alt: "Jardin après les travaux",
-  work_eyebrow: "Réalisations", work_title: "Des extérieurs dont on profite déjà",
-  w1_t: "Allée éclairée", w1_d: "Dalles, plantes et lumière", w2_t: "Espace piscine", w2_d: "Plage de piscine et jardin",
-  w3_t: "Terrasse et gravier", w3_d: "Composite et jardin sec", w4_t: "Coin détente", w4_d: "Mobilier, plantes et lumière",
+  ba_eyebrow: "Avant / après", ba_title: "Un vrai chantier Jardiva",
+  ba_lead: "Voici le résultat : préparation du terrain, bordure métallique et pose de gazon synthétique.",
+  ba_1: "Retrait du gravier et nivellement du terrain", ba_2: "Bordure métallique pour une finition nette", ba_3: "Gazon synthétique d'aspect naturel",
+  before: "AVANT", after: "APRÈS",
+  before_alt: "Jardin avant la pose du gazon", after_alt: "Jardin après la pose du gazon",
+  chalet_alt: "Jardin de villa en gazon synthétique", chalet_cap: "Jardin de villa en gazon synthétique",
   who_eyebrow: "Pour qui nous travaillons", who_title: "Particuliers, copropriétés et professionnels",
   who1_t: "Maisons, villas et domaines", who1_d: "Des jardins privés à savourer sans y passer tous vos week-ends.",
   who2_t: "Copropriétés", who2_d: "Espaces communs, piscines et jardins avec un entretien régulier.",
@@ -754,7 +768,7 @@ fr: {
   q1: "Combien de temps dure un gazon synthétique ?", a1: "Un gazon de qualité bien posé dure en général de 8 à 15 ans, selon l'usage et l'ensoleillement. Nous vous conseillons le modèle adapté à votre espace.",
   q2: "Convient-il aux enfants et aux chiens ?", a2: "Oui. Nous choisissons des modèles adaptés aux enfants et aux animaux et les posons sur une base drainante : l'eau s'évacue et un simple rinçage au jet suffit pour le nettoyer.",
   q3: "Chauffe-t-il en été ?", a3: "Comme toute surface au soleil, il chauffe. Nous recommandons des modèles qui accumulent moins la chaleur et un léger arrosage les jours les plus chauds.",
-  q4: "Combien ça coûte ?", a4: "Cela dépend de la surface, du modèle et de l'état du terrain. Envoyez-nous la surface approximative et une photo sur WhatsApp : nous vous donnons un prix ferme et sans engagement.",
+  q4: "Combien ça coûte ?", a4: "À titre indicatif, le gazon synthétique posé coûte en général entre 25 et 45 €/m², selon la surface, le modèle et l'état du terrain. Envoyez-nous la surface approximative et une photo sur WhatsApp : nous vous donnons un prix ferme et sans engagement.",
   q5: "Dans quelles zones intervenez-vous ?", a5: "Nous travaillons en Espagne. Écrivez-nous avec votre localité et nous vous confirmons disponibilités et dates.",
   c_eyebrow: "Contact", c_title: "Parlez-nous de l'extérieur dont vous rêvez",
   c_lead: "Écrivez-nous sur WhatsApp avec une photo de votre espace. En français, espagnol, anglais ou allemand.",
@@ -762,7 +776,7 @@ fr: {
   l_name: "Nom", l_town: "Ville", l_svc: "Service", l_msg: "Votre projet",
   ph_msg: "Surface approximative, ce que vous souhaitez changer…", send: "Envoyer sur WhatsApp",
   need_name: "Indiquez votre nom pour préparer le message.",
-  foot2: "Jardinage · Gazon synthétique · Composite · Décoration",
+  foot2: "Gazon synthétique · Composite · Entretien · Arrosage",
   tip_t: "On en parle ?", tip_d: "Écrivez-nous, nous répondons sur WhatsApp.", close: "Fermer",
   wa_general: "Bonjour Jardiva, je souhaiterais des informations sur vos services.",
   wa_quote: "Bonjour Jardiva, je souhaite un devis pour mon extérieur.",
@@ -772,13 +786,13 @@ fr: {
 },
 de: {
   meta_title: "Jardiva · Kunstrasen und Gartengestaltung in Spanien",
-  meta_desc: "Jardiva, Studio für Außenbereiche: Kunstrasen, Gartenpflege, WPC-Terrassen und Außengestaltung. Angebot per WhatsApp.",
+  meta_desc: "Jardiva, Studio für Außenbereiche: Kunstrasen, Gartenpflege, WPC-Terrassen und Bewässerungssysteme. Angebot per WhatsApp.",
   tagline_small: "STUDIO FÜR AUSSENBEREICHE",
   nav_grass: "Kunstrasen", nav_services: "Leistungen", nav_work: "Projekte", nav_faq: "Fragen", nav_contact: "Kontakt",
   cta_short: "Angebot",
   hero_eyebrow: "Natur · Design · Komfort · Wohlbefinden",
   hero_title: "Außenbereiche <em>zum Leben.</em>",
-  hero_lead: "Kunstrasen, Gartenpflege, WPC-Terrassen und Außengestaltung. Ein Team, das Ihren Garten plant, anlegt und pflegt – damit Sie ihn einfach genießen können.",
+  hero_lead: "Kunstrasen, Gartenpflege, WPC-Terrassen und Bewässerungssysteme. Ein Team, das Ihren Garten plant, anlegt und pflegt – damit Sie ihn einfach genießen können.",
   hero_alt: "Terrasse mit Pergola, Lounge-Sofa und Pool bei Sonnenuntergang",
   cta_quote: "Angebot per WhatsApp anfragen", cta_calc: "Rasenfläche berechnen",
   fact1: "Kostenloses, unverbindliches Angebot", fact2: "Schriftlicher Festpreis", fact3: "Sauber und pünktlich",
@@ -797,16 +811,17 @@ de: {
   s1_t: "Gartenpflege", s1_d: "Schnitt, Rasenmähen, Reinigung und Pflanzenpflege mit regelmäßigen Besuchen.",
   s2_t: "Kunstrasen", s2_d: "Natürliche Optik, strapazierfähig und pflegeleicht. Ideal für Gärten, Terrassen und Pools.",
   s3_t: "WPC-Terrassendielen", s3_d: "Elegante Außenböden, die nicht faulen und nicht splittern. Perfekt für Terrassen und Lounge-Bereiche.",
-  s4_t: "Außengestaltung", s4_d: "Pflanzen, Stein, Licht und Möbel im Einklang mit Ihrem Garten oder Ihrer Terrasse.",
+  s4_t: "Bewässerungssysteme", s4_d: "Automatische Tropf- oder Sprinklerbewässerung mit Zeitschaltuhr – spart Wasser und Zeit.",
+  approx: "Ca.", u_m2: "m²", u_h: "Std.", calc_est: "Richtpreis inkl. Verlegung",
+  price_note: "Richtpreise für den spanischen Markt. Der Endpreis hängt von Fläche, Material und Untergrund ab – Sie erhalten einen Festpreis, nachdem wir Ihren Außenbereich gesehen haben.",
+  q_eyebrow: "Angebot anfragen", q_title: "Bereit, Ihren Außenbereich zu verwandeln?", q_lead: "Senden Sie uns ein Foto und die Fläche per WhatsApp – Sie erhalten ein klares, unverbindliches Angebot.", q_cta: "Angebot per WhatsApp",
   ask: "Anfragen", star: "Spezialität",
-  ba_eyebrow: "Vorher und nachher", ba_title: "Vom ungenutzten Platz zum Lieblingsort",
-  ba_lead: "Schieben Sie den Regler: Kunstrasen, WPC-Dielen und Beleuchtung in einem Projekt.",
-  ba_1: "Kunstrasen auf Drainage-Unterbau", ba_2: "Weg aus WPC-Dielen", ba_3: "Stimmungsbeleuchtung und mediterrane Pflanzen",
-  before: "VORHER", after: "NACHHER", ba_aria: "Vorher und nachher vergleichen",
-  before_alt: "Garten vor der Umgestaltung", after_alt: "Garten nach der Umgestaltung",
-  work_eyebrow: "Projekte", work_title: "Außenbereiche, die schon genossen werden",
-  w1_t: "Beleuchteter Gartenweg", w1_d: "Platten, Pflanzen und Licht", w2_t: "Poolbereich", w2_d: "Poolrand und Garten",
-  w3_t: "Dielen und Kies", w3_d: "WPC mit Kiesgarten", w4_t: "Lounge-Ecke", w4_d: "Möbel, Pflanzen und Licht",
+  ba_eyebrow: "Vorher und nachher", ba_title: "Ein echtes Jardiva-Projekt",
+  ba_lead: "So wurde dieser Garten: Untergrund vorbereitet, Metallkante gesetzt und Kunstrasen verlegt.",
+  ba_1: "Kies entfernt und Boden nivelliert", ba_2: "Metallkante für einen sauberen Abschluss", ba_3: "Kunstrasen mit natürlicher Optik",
+  before: "VORHER", after: "NACHHER",
+  before_alt: "Garten vor dem Kunstrasen", after_alt: "Garten mit neuem Kunstrasen",
+  chalet_alt: "Villengarten mit Kunstrasen", chalet_cap: "Villengarten mit Kunstrasen",
   who_eyebrow: "Für wen wir arbeiten", who_title: "Privatkunden, Eigentümergemeinschaften und Betriebe",
   who1_t: "Häuser, Villen und Fincas", who1_d: "Private Gärten zum Genießen – ohne jedes Wochenende darin zu arbeiten.",
   who2_t: "Eigentümergemeinschaften", who2_d: "Gemeinschaftsflächen, Pools und Gärten mit regelmäßiger Pflege.",
@@ -820,7 +835,7 @@ de: {
   q1: "Wie lange hält Kunstrasen?", a1: "Hochwertiger, fachgerecht verlegter Kunstrasen hält in der Regel 8 bis 15 Jahre, je nach Nutzung und Sonneneinstrahlung. Wir beraten Sie zum passenden Modell.",
   q2: "Ist er für Kinder und Hunde geeignet?", a2: "Ja. Wir wählen kinder- und haustierfreundliche Modelle und verlegen sie auf einem Drainage-Unterbau: Wasser läuft ab, und ein kurzes Abspritzen mit dem Schlauch genügt zur Reinigung.",
   q3: "Wird er im Sommer heiß?", a3: "Wie jede Oberfläche in der Sonne erwärmt er sich. Wir empfehlen Modelle, die weniger Hitze speichern, und an den heißesten Tagen kurz abzubrausen.",
-  q4: "Was kostet das?", a4: "Das hängt von Fläche, Modell und Untergrund ab. Senden Sie uns die ungefähre Fläche und ein Foto per WhatsApp, und Sie erhalten einen unverbindlichen Festpreis.",
+  q4: "Was kostet das?", a4: "Als Richtwert kostet verlegter Kunstrasen meist 25–45 €/m², je nach Fläche, Modell und Untergrund. Senden Sie uns die ungefähre Fläche und ein Foto per WhatsApp, und Sie erhalten einen unverbindlichen Festpreis.",
   q5: "In welchen Regionen arbeiten Sie?", a5: "Wir arbeiten in Spanien. Schreiben Sie uns Ihren Ort, und wir bestätigen Verfügbarkeit und Termine.",
   c_eyebrow: "Kontakt", c_title: "Erzählen Sie uns von Ihrem Wunsch-Außenbereich",
   c_lead: "Schreiben Sie uns per WhatsApp mit einem Foto Ihres Außenbereichs – gerne auf Deutsch, Englisch, Französisch oder Spanisch.",
@@ -828,7 +843,7 @@ de: {
   l_name: "Name", l_town: "Ort", l_svc: "Leistung", l_msg: "Ihr Projekt",
   ph_msg: "Ungefähre Fläche, was Sie ändern möchten…", send: "Per WhatsApp senden",
   need_name: "Geben Sie Ihren Namen ein, um die Nachricht vorzubereiten.",
-  foot2: "Gartenpflege · Kunstrasen · WPC · Gestaltung",
+  foot2: "Kunstrasen · WPC · Gartenpflege · Bewässerung",
   tip_t: "Sollen wir sprechen?", tip_d: "Schreiben Sie uns, wir antworten per WhatsApp.", close: "Schließen",
   wa_general: "Hallo Jardiva, ich hätte gerne Informationen zu Ihren Leistungen.",
   wa_quote: "Hallo Jardiva, ich möchte ein Angebot für meinen Außenbereich anfragen.",
@@ -858,6 +873,9 @@ function detectLang() {
 function calcLink() {
   const d = T[lang], m = $("#m2").value, use = document.querySelector('input[name="use"]:checked').value;
   $("#calc-link").href = wa(d.wa_calc(m, d[use]));
+  const nf = new Intl.NumberFormat(LOCALE[lang], { maximumFractionDigits: 0, useGrouping: "always" });
+  const r = (v) => Math.round(v / 10) * 10;
+  $("#est-out").textContent = `${nf.format(r(m * PRICES.s2.min))} – ${nf.format(r(m * PRICES.s2.max))} €`;
 }
 
 function apply(l, remember) {
@@ -876,6 +894,7 @@ function apply(l, remember) {
     const k = a.dataset.wa;
     a.href = wa(k === "general" ? d.wa_general : k === "quote" ? d.wa_quote : d.wa_svc(d[k + "_t"]));
   });
+  $$("[data-price]").forEach(el => { const p = PRICES[el.dataset.price]; el.textContent = `${d.approx} ${p.min}–${p.max} €/${d[p.unit]}`; });
   calcLink();
   if (remember) {
     try { localStorage.setItem("jardiva-lang", lang); } catch (e) {}
@@ -895,10 +914,6 @@ const syncM2 = () => {
 m2.addEventListener("input", syncM2);
 $$('input[name="use"]').forEach(r => r.addEventListener("change", calcLink));
 
-// antes / después
-const ba = $("#ba"), range = $("#ba-range");
-const setPos = () => ba.style.setProperty("--pos", range.value + "%");
-range.addEventListener("input", setPos);
 
 // formulario -> WhatsApp en un clic
 $("#lead").addEventListener("submit", (e) => {
@@ -930,7 +945,7 @@ if ("IntersectionObserver" in window) {
 
 $("#yr").textContent = new Date().getFullYear();
 apply(detectLang(), false);
-syncM2(); setPos();
+syncM2();
 </script>
 </body>
 </html>
